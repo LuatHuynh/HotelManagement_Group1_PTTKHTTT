@@ -22,6 +22,7 @@ namespace HotelManagement
     {
         public MainWindow()
         {
+            //intitial
             InitializeComponent();
         }
     }
