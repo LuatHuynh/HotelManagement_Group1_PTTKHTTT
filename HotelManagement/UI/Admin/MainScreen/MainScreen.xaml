@@ -7,7 +7,42 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800"
         WindowStyle="none"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        Background="#1F6E8C">
+    <Window.Resources>
+        <Style x:Key="setFont" TargetType="TextBlock">
+
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+
+        </Style>
+        <Style x:Key="NavStyle" TargetType="TextBlock">
+
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#D3D04F"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="exitStyle" TargetType="Image">
+
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Opacity" Value="0.6"> </Setter>
+                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="100"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="45">
@@ -21,7 +56,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid Grid.ColumnSpan="2" 
-              Background="#213363"
+              Background="#0E2954"
               MouseDown="dragApplication">
 
             <Grid.ColumnDefinitions>
@@ -39,70 +74,43 @@
             <TextBlock
                 Grid.Column="0"
                 Text="Home"
-                Foreground="White"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontFamily="../../../resources/font/#dosis"
-                FontWeight="Medium">
-
+                Style="{StaticResource ResourceKey=NavStyle}"
+                >
+               
             </TextBlock>
             <TextBlock
                 Grid.Column="1"
                 TextWrapping="Wrap"
                 Text="Room Management"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontFamily="../../../resources/font/#dosis"
-                FontWeight="Medium">
-                <TextBlock.Style>
-                    <Style TargetType="TextBlock">
-                        <Setter Property="Cursor" Value="Hand"></Setter>
-                        <Setter Property="Foreground" Value="White"></Setter>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Foreground" Value="#D3D04F"></Setter>
-                              
-                              
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-
-                </TextBlock.Style>
+                   Style="{StaticResource ResourceKey=NavStyle}">
+     
             </TextBlock>
             <TextBlock
                 Grid.Column="2"
                 TextWrapping="Wrap"
                 Text="Regulation Management"
-                Foreground="White"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontFamily="../../../resources/font/#dosis"
-                FontWeight="Medium">
+                  Style="{StaticResource ResourceKey=NavStyle}">
 
             </TextBlock>
-            <Grid.Resources>
-                <Style TargetType="Button">
-
-                    <Setter Property="Cursor" Value="Hand"></Setter>
-                    <Setter Property="Foreground" Value="White"></Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Foreground" Value="#D3D04F"></Setter>
-
-
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Grid.Resources>
-            <Grid.Style>
-                <Style TargetType="Grid">
-                    <Style.Resources>
-                      
-                    </Style.Resources>
-                </Style>
-              
-
-            </Grid.Style>
+            <Image Source="../../../resources/Icons/cross.png"
+                   Grid.Column="9"
+                   Height="25" Width="25"
+                   HorizontalAlignment="Right" Margin="10"
+                   MouseDown="Image_MouseDown"
+                   Style="{StaticResource ResourceKey=exitStyle}"></Image>
         </Grid>
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" 
+                        >
+                <Image Source="../../../resources/icons/reception.png"
+                       Width="50"></Image>
+                <TextBlock Text="Hello Admin"  
+                           Style="{StaticResource ResourceKey=setFont}"
+                           FontSize="40"
+                           Margin="4"></TextBlock>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

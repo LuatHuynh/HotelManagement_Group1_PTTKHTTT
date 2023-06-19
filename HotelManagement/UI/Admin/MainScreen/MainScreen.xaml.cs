@@ -32,5 +32,14 @@ namespace HotelManagement.UI.Admin.MainScreen
                 DragMove();
             }
         }
+
+   
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                Close();
+            }
+        }
     }
 }
