@@ -9,6 +9,11 @@
 
   <ItemGroup>
     <None Remove="resources\Icons\cross.png" />
+    <None Remove="resources\Icons\reception.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\Icons\reception.png" />
   </ItemGroup>
 
   <ItemGroup>

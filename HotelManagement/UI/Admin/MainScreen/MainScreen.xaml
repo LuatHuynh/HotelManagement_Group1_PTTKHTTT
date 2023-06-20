@@ -10,7 +10,31 @@
         ResizeMode="NoResize"
         Background="#1F6E8C">
     <Window.Resources>
-        <Style x:Key="button"></Style>
+        <ControlTemplate x:Key="button" TargetType="Button">
+            <Border Width="100" 
+                    Height="25"
+                    CornerRadius="12"
+                    Background="{TemplateBinding Background}">
+                <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center">
+                    
+                </ContentPresenter>    
+            </Border>
+            
+        </ControlTemplate>
+        <Style x:Key="buttonStyle" TargetType="Button">
+     
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Background" Value="#2E8A99"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#84A7A1"></Setter>
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                </Trigger>
+             
+            </Style.Triggers>
+            
+        </Style>
         <Style x:Key="setFont" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="../../../resources/font/#Dosis"></Setter>
             <Setter Property="Cursor" Value="Hand"></Setter>
@@ -109,7 +133,8 @@
         </Grid>
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Center" 
-                    VerticalAlignment="Center">
+                    VerticalAlignment="Center"
+                    Margin="10">
             <StackPanel Orientation="Horizontal" 
                         >
                 <Image Source="../../../resources/icons/reception.png"
@@ -138,9 +163,11 @@
                 <TextBlock Text="Not you ?"
                            Style="{StaticResource ResourceKey=setFont}"
                            Margin="0,0,20,0"></TextBlock>
-                <Button Content="Sign out"></Button>
-                <Button Content=""></Button>
-                
+                <Button Content="Sign out"
+                        Template="{StaticResource ResourceKey=button}"
+                        Style="{StaticResource ResourceKey=buttonStyle}"
+                       ></Button>
+
             </StackPanel>
         </StackPanel>
     </Grid>
