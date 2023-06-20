@@ -10,16 +10,16 @@
         ResizeMode="NoResize"
         Background="#1F6E8C">
     <Window.Resources>
+        <Style x:Key="button"></Style>
         <Style x:Key="setFont" TargetType="TextBlock">
-
+            <Setter Property="FontFamily" Value="../../../resources/font/#Dosis"></Setter>
             <Setter Property="Cursor" Value="Hand"></Setter>
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-
         </Style>
         <Style x:Key="NavStyle" TargetType="TextBlock">
-
+            <Setter Property="FontFamily" Value="../../../resources/font/#Dosis"></Setter>
             <Setter Property="Cursor" Value="Hand"></Setter>
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
@@ -92,6 +92,14 @@
                   Style="{StaticResource ResourceKey=NavStyle}">
 
             </TextBlock>
+
+            <TextBlock
+                Grid.Column="3"
+                TextWrapping="Wrap"
+                Text="Account Management"
+                  Style="{StaticResource ResourceKey=NavStyle}">
+
+            </TextBlock>
             <Image Source="../../../resources/Icons/cross.png"
                    Grid.Column="9"
                    Height="25" Width="25"
@@ -106,10 +114,33 @@
                         >
                 <Image Source="../../../resources/icons/reception.png"
                        Width="50"></Image>
-                <TextBlock Text="Hello Admin"  
+                <TextBlock Text="Hotel Management"  
                            Style="{StaticResource ResourceKey=setFont}"
-                           FontSize="40"
+                           FontSize="25"
                            Margin="4"></TextBlock>
+            </StackPanel>
+            <TextBlock Text="Hello"
+                       Style="{StaticResource ResourceKey=setFont}"
+                       FontWeight="Medium"
+                       FontSize="40" HorizontalAlignment="Left"></TextBlock>
+            <TextBlock Text="My Admin"
+                       FontWeight="Medium"
+                       Style="{StaticResource ResourceKey=setFont}"
+                       FontSize="40"
+                       HorizontalAlignment="Left"></TextBlock>
+            <TextBlock Text="This is Admin's screen. Here, you can manage rooms, hotel regulations and user's accounts."
+                       TextWrapping="Wrap"
+                       Style="{StaticResource ResourceKey=setFont}"
+                       FontSize="15"
+                       HorizontalAlignment="Left"></TextBlock>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,20,0,0">
+                <TextBlock Text="Not you ?"
+                           Style="{StaticResource ResourceKey=setFont}"
+                           Margin="0,0,20,0"></TextBlock>
+                <Button Content="Sign out"></Button>
+                <Button Content=""></Button>
+                
             </StackPanel>
         </StackPanel>
     </Grid>
