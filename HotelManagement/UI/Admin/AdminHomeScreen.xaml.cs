@@ -13,14 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelManagement
+namespace HotelManagement.UI.Admin
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AdminHomeScreen.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdminHomeScreen : UserControl
     {
-        public MainWindow()
+
+        public AdminHomeScreen()
         {
             InitializeComponent();
         }

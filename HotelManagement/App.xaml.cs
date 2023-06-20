@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
+using HotelManagement.ViewModel;
+
 namespace HotelManagement
 {
     /// <summary>
@@ -13,5 +15,14 @@ namespace HotelManagement
     /// </summary>
     public partial class App : Application
     {
-    }
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            MainWindow = new MainWindow() {
+                DataContext = new MainViewModel()
+            
+            };
+            MainWindow.Show();
+            base.OnStartup(e);
+        }
+}
 }
