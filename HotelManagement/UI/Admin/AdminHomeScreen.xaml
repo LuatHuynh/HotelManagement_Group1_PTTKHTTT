@@ -102,7 +102,7 @@
             <Button Content="Sign out"
                         Template="{StaticResource ResourceKey=button}"
                         Style="{StaticResource ResourceKey=buttonStyle}"
-                        Command="{Binding _submitCommand}"
+                        Command="{Binding _submitCommand}" 
                        ></Button>
 
         </StackPanel>

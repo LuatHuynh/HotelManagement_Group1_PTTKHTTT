@@ -16,8 +16,13 @@ namespace HotelManagement.Stores
             get { return _currentViewModel; }
             set { 
                 _currentViewModel = value;
+                OnCurentViewModelChanged();
             }
         }
-
+        public event Action CurrentViewModelChanged;
+        private void OnCurentViewModelChanged()
+        {
+            CurrentViewModelChanged?.Invoke();
+        }
     }
 }

@@ -5,13 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HotelManagement.UI.Admin"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="800">
+             Height="400" Width="800">
     <UserControl.Resources>
         <Style x:Key="buttonStyle" TargetType="Button">
-            <Setter Property="FontSize" Value="100"></Setter>
+            <Setter Property="FontWeight" Value="Medium"> </Setter>
+            <Setter Property="FontSize" Value="12"></Setter>
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="Background" Value="#2E8A99"></Setter>
+            <Setter Property="FontFamily" Value="../../resources/font/#Dosis"></Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#84A7A1"></Setter>
@@ -70,6 +72,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -84,7 +87,7 @@
             <Border
                 Style="{StaticResource border}">
                 <TextBlock
-                Text="User ID"
+                Text="User ID NO."
                 Style="{StaticResource label}"></TextBlock>
             </Border>
             <TextBox
@@ -118,6 +121,21 @@
             <TextBox
                 Template="{StaticResource labelTemplate}"></TextBox>
         </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+            <Border
+                Style="{StaticResource border}">
+                <TextBlock
+                Text="Confirm Password"
+                Style="{StaticResource label}"></TextBlock>
+            </Border>
+            <TextBox
+                Template="{StaticResource labelTemplate}"></TextBox>
+        </StackPanel>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"
                     Orientation="Vertical"
@@ -127,18 +145,35 @@
             <Border
                 Style="{StaticResource border}">
                 <TextBlock
-                Text="Confirmed Password"
+                Text="Phone number"
                 Style="{StaticResource label}"></TextBlock>
             </Border>
             <TextBox
                 Template="{StaticResource labelTemplate}"></TextBox>
         </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="1">
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+            <Border
+                Style="{StaticResource border}">
+                <TextBlock
+                Text="Address"
+                Style="{StaticResource label}"></TextBlock>
+            </Border>
+            <TextBox
+                Template="{StaticResource labelTemplate}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
             <Button
-                FontSize="20"
-                Content="submit"
+                
+                Content="Submit"
                 Template="{StaticResource ResourceKey=button}"
-                    Style="{StaticResource ResourceKey=buttonStyle}" Click="Button_Click"
+                    Style="{StaticResource ResourceKey=buttonStyle}" 
                    
                     ></Button>
         </StackPanel>

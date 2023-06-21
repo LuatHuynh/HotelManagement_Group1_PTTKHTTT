@@ -14,11 +14,14 @@ namespace HotelManagement.ViewModel.Admin
         public AdminMainViewModel()
           
         {
-            _navigationStore = new NavigationStore(); 
-            test = "concac";
-            _navigationStore.CurrentViewModel = new AdminHomeScreenViewModel();
-            Console.WriteLine(CurrentAdminViewModel);
-          
+            _navigationStore = new NavigationStore();
+            _navigationStore.CurrentViewModel = new AdminHomeScreenViewModel(_navigationStore);
+            _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
+        }
+
+        private void OnCurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentAdminViewModel));
         }
 
         public ViewModelBase CurrentAdminViewModel => _navigationStore.CurrentViewModel;

@@ -71,11 +71,11 @@
     <Grid>
         <Grid.Resources>
             <DataTemplate DataType="{x:Type vms:AdminHomeScreenViewModel}">
-                <views:AdminHomeScreen 
-
-                    
-                   >
-                </views:AdminHomeScreen>
+                <views:AdminHomeScreen></views:AdminHomeScreen>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:AdminAddUserViewModel}">
+                <views:AddUserScreen   
+                                          Grid.ColumnSpan="2"></views:AddUserScreen>
             </DataTemplate>
         </Grid.Resources>
         <Grid.RowDefinitions>
@@ -93,7 +93,8 @@
                                  Background="#0E2954"
                                 MouseDown="dragApplication"></views:AdminNavBarScreen>
         <ContentControl Content="{Binding CurrentAdminViewModel}"
-                                            Grid.Row="1"
+                                          Grid.Row="1"
+                        Grid.ColumnSpan="2"
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center"
                     Margin="10" ></ContentControl>

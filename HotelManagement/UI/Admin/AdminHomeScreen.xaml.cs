@@ -30,5 +30,10 @@ namespace HotelManagement.UI.Admin
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using HotelManagement.Command;
+using HotelManagement.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,13 @@ namespace HotelManagement.ViewModel.Admin
     public class AdminHomeScreenViewModel:ViewModelBase
     {
         private string _username;
-        public AdminHomeScreenViewModel()
+        //private readonly NavigationStore _navigationStore;
+        public AdminHomeScreenViewModel(NavigationStore _navigationStore)
         {
             //Username = "khoa";
 
-            _submitCommand = new LogOutCommand(this);
+            //_submitCommand = new LogOutCommand(this);
+            _submitCommand = new NavigateCommand(_navigationStore);
         }
 
         public string Username

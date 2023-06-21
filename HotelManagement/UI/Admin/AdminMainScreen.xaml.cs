@@ -26,13 +26,8 @@ namespace HotelManagement.UI.Admin
     
         public AdminMainScreen()
         {
-
-      
             InitializeComponent();
-
         }
-
-
 
         private void dragApplication(object sender, MouseButtonEventArgs e)
         {
