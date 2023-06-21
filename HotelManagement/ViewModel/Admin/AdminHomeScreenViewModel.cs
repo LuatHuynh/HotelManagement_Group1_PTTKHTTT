@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelManagement.Command;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,15 +8,14 @@ using System.Windows.Input;
 
 namespace HotelManagement.ViewModel.Admin
 {
-    class AdminHomeScreenViewModel:ViewModelBase
+    public class AdminHomeScreenViewModel:ViewModelBase
     {
         private string _username;
-
         public AdminHomeScreenViewModel()
         {
-            Username = "khoa";
+            //Username = "khoa";
 
-
+            _submitCommand = new LogOutCommand(this);
         }
 
         public string Username
@@ -24,7 +24,7 @@ namespace HotelManagement.ViewModel.Admin
             set
             {
                 _username = value;
-                OnPropertyChanged(nameof(_username));
+                OnPropertyChanged(nameof(Username));
             }
         }
         public ICommand _submitCommand { get; set; }

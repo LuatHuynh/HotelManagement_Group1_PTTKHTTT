@@ -25,5 +25,10 @@ namespace HotelManagement.UI.Admin
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -88,11 +88,12 @@
                        Style="{StaticResource ResourceKey=setFont}"
                        FontSize="15"
                        HorizontalAlignment="Left"></TextBlock>
-        <TextBlock Text="{Binding Username}"
+        <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
                        FontWeight="Medium"
-                       Style="{StaticResource ResourceKey=setFont}"
-                       FontSize="40"
-                       HorizontalAlignment="Left"></TextBlock>
+                       Width="100"
+                       Height="25"
+                       FontSize="20"
+                       HorizontalAlignment="Left" TextChanged="TextBox_TextChanged"></TextBox>
         <StackPanel Orientation="Horizontal"
                         Margin="0,20,0,0">
             <TextBlock Text="Not you ?"
@@ -101,6 +102,7 @@
             <Button Content="Sign out"
                         Template="{StaticResource ResourceKey=button}"
                         Style="{StaticResource ResourceKey=buttonStyle}"
+                        Command="{Binding _submitCommand}"
                        ></Button>
 
         </StackPanel>
