@@ -8,8 +8,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Imgs\add.png" />
+    <None Remove="Imgs\delete.png" />
+    <None Remove="Imgs\detail.png" />
+    <None Remove="Imgs\ReservationCard.png" />
+    <None Remove="Imgs\search.png" />
+    <None Remove="Imgs\update.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fluent.Ribbon" Version="10.0.0" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Imgs\add.png" />
+    <Resource Include="Imgs\delete.png" />
+    <Resource Include="Imgs\detail.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imgs\ReservationCard.png" />
+    <Resource Include="Imgs\search.png" />
+    <Resource Include="Imgs\update.png" />
   </ItemGroup>
 
 </Project>
