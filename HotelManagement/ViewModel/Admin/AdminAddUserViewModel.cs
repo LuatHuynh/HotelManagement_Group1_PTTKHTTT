@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace HotelManagement.ViewModel.Admin
 {
-    class AdminAddUserViewModel:ViewModelBase
+   public class AdminAddUserViewModel:ViewModelBase
     {
         public string _userIDNo;
         public string _name;

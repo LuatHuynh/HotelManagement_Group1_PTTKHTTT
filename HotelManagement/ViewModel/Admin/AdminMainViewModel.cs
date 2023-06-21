@@ -15,7 +15,7 @@ namespace HotelManagement.ViewModel.Admin
           
         {
             _navigationStore = new NavigationStore();
-            _navigationStore.CurrentViewModel = new AdminHomeScreenViewModel(_navigationStore);
+            _navigationStore.CurrentViewModel = new AdminHomeScreenViewModel(_navigationStore,createAdminAddUserViewModel);
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
         }
 
@@ -26,6 +26,14 @@ namespace HotelManagement.ViewModel.Admin
 
         public ViewModelBase CurrentAdminViewModel => _navigationStore.CurrentViewModel;
         public string test { get; set; }
-
+        
+        private AdminHomeScreenViewModel creaetAdminHomeScreenViewModel()
+        {
+            return new AdminHomeScreenViewModel(_navigationStore, createAdminAddUserViewModel);
+        }
+        private AdminAddUserViewModel createAdminAddUserViewModel()
+        {
+            return new AdminAddUserViewModel();
+        }
     }
 }

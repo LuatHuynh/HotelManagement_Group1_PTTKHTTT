@@ -13,12 +13,12 @@ namespace HotelManagement.ViewModel.Admin
     {
         private string _username;
         //private readonly NavigationStore _navigationStore;
-        public AdminHomeScreenViewModel(NavigationStore _navigationStore)
+        public AdminHomeScreenViewModel(NavigationStore _navigationStore,Func<AdminAddUserViewModel> createAdminAddUserViewModel)
         {
             //Username = "khoa";
 
             //_submitCommand = new LogOutCommand(this);
-            _submitCommand = new NavigateCommand(_navigationStore);
+            _submitCommand = new NavigateCommand(_navigationStore, createAdminAddUserViewModel);
         }
 
         public string Username

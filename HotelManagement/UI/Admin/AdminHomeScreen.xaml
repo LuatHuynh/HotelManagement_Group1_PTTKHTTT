@@ -88,12 +88,12 @@
                        Style="{StaticResource ResourceKey=setFont}"
                        FontSize="15"
                        HorizontalAlignment="Left"></TextBlock>
-        <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+        <!--<TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
                        FontWeight="Medium"
                        Width="100"
                        Height="25"
                        FontSize="20"
-                       HorizontalAlignment="Left" TextChanged="TextBox_TextChanged"></TextBox>
+                       HorizontalAlignment="Left" TextChanged="TextBox_TextChanged"></TextBox>-->
         <StackPanel Orientation="Horizontal"
                         Margin="0,20,0,0">
             <TextBlock Text="Not you ?"
