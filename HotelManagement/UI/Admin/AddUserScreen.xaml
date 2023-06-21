@@ -5,8 +5,142 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HotelManagement.UI.Admin"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="400" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="100"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Background" Value="#2E8A99"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#84A7A1"></Setter>
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                </Trigger>
+
+            </Style.Triggers>
+
+        </Style>
+        <ControlTemplate x:Key="button" TargetType="Button">
+            <Border   CornerRadius="10"
+                        Width="70"
+                        Height="25"
+                        Background="{TemplateBinding Background}">
+                <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center">
+                    
+                </ContentPresenter>
+                
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="labelTemplate" TargetType="TextBox">
+            <Border
+                CornerRadius="2"
+                Margin="0,10,0,0"
+                Width="150"
+                Height="20"
+                Background="{TemplateBinding Background}"
+                HorizontalAlignment="Left"
+                >
+                <ContentPresenter
+                    >
+                    
+                </ContentPresenter>
+            </Border>
             
+        </ControlTemplate>
+        <Style x:Key="border" TargetType="Border">
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="CornerRadius" Value="1"></Setter>
+            <Setter Property="BorderBrush" Value="white"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+            <Setter Property="Background" Value="#1F6E8C"></Setter>
+        </Style>
+        <Style x:Key="label" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="white"></Setter>
+            <Setter Property="FontFamily" Value="../../resources/font/#Dosis"></Setter>
+            <Setter Property="Padding" Value="4"> </Setter>
+            <!--<Setter Property="Background" Value="#1F6E8C"></Setter>-->
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition 
+                Height="45"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+            <Border
+                Style="{StaticResource border}">
+                <TextBlock
+                Text="User ID"
+                Style="{StaticResource label}"></TextBlock>
+            </Border>
+            <TextBox
+                Template="{StaticResource labelTemplate}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+            <Border
+                Style="{StaticResource border}">
+                <TextBlock
+                Text="Username"
+                Style="{StaticResource label}"></TextBlock>
+            </Border>
+            <TextBox
+                Template="{StaticResource labelTemplate}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+            <Border
+                Style="{StaticResource border}">
+                <TextBlock
+                Text="Password"
+                Style="{StaticResource label}"></TextBlock>
+            </Border>
+            <TextBox
+                Template="{StaticResource labelTemplate}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+            <Border
+                Style="{StaticResource border}">
+                <TextBlock
+                Text="Confirmed Password"
+                Style="{StaticResource label}"></TextBlock>
+            </Border>
+            <TextBox
+                Template="{StaticResource labelTemplate}"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Button
+                FontSize="20"
+                Content="submit"
+                Template="{StaticResource ResourceKey=button}"
+                    Style="{StaticResource ResourceKey=buttonStyle}" Click="Button_Click"
+                   
+                    ></Button>
+        </StackPanel>
     </Grid>
 </UserControl>
