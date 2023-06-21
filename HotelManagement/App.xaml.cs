@@ -25,7 +25,7 @@ namespace HotelManagement
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            _navigationStore.CurrentViewModel = new AdminHomeScreenViewModel();
+            _navigationStore.CurrentViewModel = new AdminMainViewModel();
             MainWindow = new MainWindow() {
                 DataContext = new MainViewModel(_navigationStore)
             

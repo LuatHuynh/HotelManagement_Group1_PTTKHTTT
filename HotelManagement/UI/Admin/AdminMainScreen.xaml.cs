@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HotelManagement.Stores;
+using HotelManagement.ViewModel.Admin;
+using HotelManagement.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,13 +23,11 @@ namespace HotelManagement.UI.Admin
     /// </summary>
     public partial class AdminMainScreen : UserControl
     {
-        //Window window;
+    
         public AdminMainScreen()
         {
 
-            //window = Window.GetWindow(this);
-
-
+      
             InitializeComponent();
 
         }
@@ -42,17 +43,5 @@ namespace HotelManagement.UI.Admin
 
             }
         }
-
-
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ClickCount == 2)
-            {
-                Window parentWindow = Window.GetWindow(this);
-                parentWindow.DragMove();
-                parentWindow.Close();
-            }
-        }
-
     }
 }

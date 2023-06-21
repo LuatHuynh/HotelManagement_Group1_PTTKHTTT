@@ -12,7 +12,7 @@
         ResizeMode="NoResize">
     <Grid>
         <Grid.Resources>
-            <DataTemplate DataType="{x:Type adminVms:AdminHomeScreenViewModel}">
+            <DataTemplate DataType="{x:Type adminVms:AdminMainViewModel}">
                 <adminViews:AdminMainScreen></adminViews:AdminMainScreen>
             </DataTemplate>
         </Grid.Resources>
