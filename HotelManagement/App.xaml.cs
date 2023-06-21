@@ -18,16 +18,16 @@ namespace HotelManagement
     {
         private readonly NavigationStore _navigationStore;
 
-        public App(NavigationStore navigationStore)
+        public App()
         {
-            _navigationStore = navigationStore;
+            _navigationStore = new NavigationStore();
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
             _navigationStore.CurrentViewModel = new AdminHomeScreenViewModel();
             MainWindow = new MainWindow() {
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(_navigationStore)
             
             };
             MainWindow.Show();

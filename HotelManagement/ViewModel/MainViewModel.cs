@@ -11,7 +11,13 @@ namespace HotelManagement.ViewModel
     class MainViewModel:ViewModelBase
     {
         private readonly NavigationStore _navigationStore;
-        public ViewModelBase _currentViewModel => _navigationStore.CurrentViewModel;
+
+        public MainViewModel(NavigationStore navigationStore)
+        {
+            _navigationStore = navigationStore;
+        }
+
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
 
     }
 }
