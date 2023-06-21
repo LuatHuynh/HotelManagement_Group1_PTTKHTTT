@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:views="clr-namespace:HotelManagement.UI.Admin"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vms="clr-namespace:HotelManagement.ViewModel.Admin"
         xmlns:local="clr-namespace:HotelManagement.UI.Admin"
         mc:Ignorable="d"
          Height="450" Width="800"
 
         Background="#1F6E8C">
-    <UserControl.Resources>
+    <!--<UserControl.Resources>
         <ControlTemplate x:Key="button" TargetType="Button">
             <Border Width="100" 
                     Height="25"
@@ -66,8 +67,18 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-    </UserControl.Resources>
+    </UserControl.Resources>-->
     <Grid>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type vms:AdminHomeScreenViewModel}">
+                <views:AdminHomeScreen 
+                    Grid.Row="1"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Margin="10" >
+                </views:AdminHomeScreen>
+            </DataTemplate>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="45">
 
@@ -79,18 +90,10 @@
 
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
         <views:AdminNavBarScreen Grid.ColumnSpan="2"
                                  Background="#0E2954"
                                 MouseDown="dragApplication"></views:AdminNavBarScreen>
-        <views:AdminHomeScreen 
-                    Grid.Row="1"
-                    HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"
-                    Margin="10"
-            >
-            
-        </views:AdminHomeScreen>
+        <ContentControl DataContext="{Binding CurrentViewModel}"></ContentControl>
          
     </Grid>
 </UserControl>

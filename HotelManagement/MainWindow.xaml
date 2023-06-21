@@ -17,6 +17,7 @@
             </DataTemplate>
         </Grid.Resources>
         <ContentControl Content="{Binding CurrentViewModel}"></ContentControl>
+        
         <!--<adminViews:AdminMainScreen DataContext="{Binding _currentViewModel}"></adminViews:AdminMainScreen>-->
     </Grid>
 </Window>
