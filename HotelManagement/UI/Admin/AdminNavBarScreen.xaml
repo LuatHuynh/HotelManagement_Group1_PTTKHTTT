@@ -85,14 +85,19 @@
                 Text="Home"
                 Style="{StaticResource ResourceKey=NavStyle}"
                 >
-
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding Home}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
         </TextBlock>
         <TextBlock
+                
                 Grid.Column="1"
                 TextWrapping="Wrap"
                 Text="Room Management"
                    Style="{StaticResource ResourceKey=NavStyle}">
-
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding UserManagement}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
         </TextBlock>
         <TextBlock
                 Grid.Column="2"

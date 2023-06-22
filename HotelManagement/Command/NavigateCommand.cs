@@ -1,4 +1,5 @@
-﻿using HotelManagement.Stores;
+﻿using HotelManagement.Services;
+using HotelManagement.Stores;
 using HotelManagement.ViewModel;
 using HotelManagement.ViewModel.Admin;
 using System;
@@ -12,18 +13,17 @@ namespace HotelManagement.Command
 {
     public class NavigateCommand : CommandBase
     {
-        private readonly NavigationStore _navigationStore;
-        private readonly Func<ViewModelBase> _createViewModel;
-        public NavigateCommand(NavigationStore navigationStore, Func<ViewModelBase> createViewModel)
+        private readonly NavigateService _navigateService;
+
+        public NavigateCommand(NavigateService navigateService)
         {
-            _navigationStore = navigationStore;
-            _createViewModel = createViewModel;
+            _navigateService = navigateService;
         }
 
         public override void Execute(object? parameter)
         {
-            _navigationStore.CurrentViewModel = _createViewModel();
-
+         
+            _navigateService.Navigate();
         }
     }
 }

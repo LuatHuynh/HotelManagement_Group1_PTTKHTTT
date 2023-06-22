@@ -74,8 +74,10 @@
                 <views:AdminHomeScreen></views:AdminHomeScreen>
             </DataTemplate>
             <DataTemplate DataType="{x:Type vms:AdminAddUserViewModel}">
-                <views:AddUserScreen   
-                                          Grid.ColumnSpan="2"></views:AddUserScreen>
+                <views:AddUserScreen ></views:AddUserScreen>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:AdminViewUserModel}">
+                <views:AdminViewUser></views:AdminViewUser>
             </DataTemplate>
         </Grid.Resources>
         <Grid.RowDefinitions>

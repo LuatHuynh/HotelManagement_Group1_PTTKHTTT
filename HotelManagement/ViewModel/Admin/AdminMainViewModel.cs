@@ -1,9 +1,12 @@
-﻿using HotelManagement.Stores;
+﻿using HotelManagement.Command;
+using HotelManagement.Services;
+using HotelManagement.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace HotelManagement.ViewModel.Admin
 {
@@ -17,6 +20,8 @@ namespace HotelManagement.ViewModel.Admin
             _navigationStore = new NavigationStore();
             _navigationStore.CurrentViewModel = new AdminHomeScreenViewModel(_navigationStore,createAdminAddUserViewModel);
             _navigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
+            UserManagement = new NavigateCommand(new NavigateService(_navigationStore, () => new AdminViewUserModel(_navigationStore)));
+            Home = new NavigateCommand(new NavigateService(_navigationStore, () => new AdminHomeScreenViewModel(_navigationStore, createAdminAddUserViewModel)));
         }
 
         private void OnCurrentViewModelChanged()
@@ -33,7 +38,9 @@ namespace HotelManagement.ViewModel.Admin
         }
         private AdminAddUserViewModel createAdminAddUserViewModel()
         {
-            return new AdminAddUserViewModel();
+            return new AdminAddUserViewModel(_navigationStore);
         }
+        public ICommand UserManagement { get; set; }
+        public ICommand Home { get; set; }
     }
 }

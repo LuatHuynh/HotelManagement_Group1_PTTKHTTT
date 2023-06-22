@@ -11,6 +11,7 @@
     <None Remove="resources\font\Dosis.ttf" />
     <None Remove="resources\Icons\cross.png" />
     <None Remove="resources\Icons\reception.png" />
+    <None Remove="resources\Icons\selective.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,12 +22,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Model\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="resources\Icons\cross.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Icons\selective.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

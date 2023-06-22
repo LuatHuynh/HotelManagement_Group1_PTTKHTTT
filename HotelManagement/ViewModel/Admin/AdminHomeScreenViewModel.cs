@@ -1,4 +1,5 @@
 ﻿using HotelManagement.Command;
+using HotelManagement.Services;
 using HotelManagement.Stores;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace HotelManagement.ViewModel.Admin
             //Username = "khoa";
 
             //_submitCommand = new LogOutCommand(this);
-            _submitCommand = new NavigateCommand(_navigationStore, createAdminAddUserViewModel);
+            _submitCommand = new NavigateCommand(new NavigateService(_navigationStore,()=>new AdminAddUserViewModel(_navigationStore)));
         }
 
         public string Username

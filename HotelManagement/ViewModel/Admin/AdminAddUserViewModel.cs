@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using HotelManagement.Services;
+using System.Windows.Navigation;
+using HotelManagement.Stores;
 
 namespace HotelManagement.ViewModel.Admin
 {
@@ -16,7 +19,6 @@ namespace HotelManagement.ViewModel.Admin
         public string _password;
         public string _phone;
         public string _address;
-
         public string UserIDNo { 
             get { return _userIDNo; }
             set { 
@@ -57,11 +59,14 @@ namespace HotelManagement.ViewModel.Admin
                 _address= value; OnPropertyChanged(nameof(Address));
             }
         }
-        public ICommand addNewUser;
+        public ICommand addNewUser { get; set; }
 
-        public AdminAddUserViewModel()
+        public AdminAddUserViewModel(NavigationStore navigationStore)
         {
-           
+      
+            addNewUser = new NavigateCommand(new NavigateService( navigationStore,()=> new AdminViewUserModel(navigationStore)));
         }
+
+  
     }
 }
