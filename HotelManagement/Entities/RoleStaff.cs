@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace HotelManagement.Entities
 {
-    class RoleStaff
+    public class RoleStaff
     {
+        public int StaffID { get; set; }
+        public int RoleID{ get; set; }
+        public Staff Staff{ get; set; }
+
+        public Role Role { get; set; }
+
+
     }
 }

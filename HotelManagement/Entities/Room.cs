@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace HotelManagement.Entities
 {
-    class Room
+     public class Room
     {
+        public int Id { get; set; }
+        public string status { get; set; }
+        public Regulation Regulation { get; set; }
     }
 }
