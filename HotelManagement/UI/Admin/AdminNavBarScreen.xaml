@@ -96,7 +96,7 @@
                 Text="Room Management"
                    Style="{StaticResource ResourceKey=NavStyle}">
             <TextBlock.InputBindings>
-                <MouseBinding Command="{Binding UserManagement}" MouseAction="LeftClick" />
+                <MouseBinding Command="{Binding Room}" MouseAction="LeftClick" />
             </TextBlock.InputBindings>
         </TextBlock>
         <TextBlock
@@ -104,6 +104,9 @@
                 TextWrapping="Wrap"
                 Text="Regulation Management"
                   Style="{StaticResource ResourceKey=NavStyle}">
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding Regulation}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
 
         </TextBlock>
 
@@ -112,7 +115,9 @@
                 TextWrapping="Wrap"
                 Text="Account Management"
                   Style="{StaticResource ResourceKey=NavStyle}">
-
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding UserManagement}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
         </TextBlock>
         <Image Source="../../resources/Icons/cross.png"
                    Grid.Column="9"

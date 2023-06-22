@@ -79,6 +79,18 @@
             <DataTemplate DataType="{x:Type vms:AdminViewUserModel}">
                 <views:AdminViewUser></views:AdminViewUser>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:AdminViewRoomModel}">
+                <views:AdminViewRoom></views:AdminViewRoom>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:AdminAddRoomModel}">
+                <views:AdminAddRoomScreen></views:AdminAddRoomScreen>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:AdminViewRegulationModel}">
+                <views:AdminViewRegulation></views:AdminViewRegulation>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:AdminAddRegulationModel}">
+                <views:AdminAddRegulationScreen></views:AdminAddRegulationScreen>
+            </DataTemplate>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="45">

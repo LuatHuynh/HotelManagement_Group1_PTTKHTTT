@@ -1,5 +1,4 @@
-﻿using HotelManagement.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,18 +16,13 @@ using System.Windows.Shapes;
 namespace HotelManagement.UI.Admin
 {
     /// <summary>
-    /// Interaction logic for AdminViewUser.xaml
+    /// Interaction logic for AdminViewRegulation.xaml
     /// </summary>
-    public partial class AdminViewUser : UserControl
+    public partial class AdminViewRegulation : UserControl
     {
-        public AdminViewUser()
+        public AdminViewRegulation()
         {
             InitializeComponent();
-        }
-
-        private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            
         }
     }
 }
