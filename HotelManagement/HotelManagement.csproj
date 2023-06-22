@@ -11,8 +11,11 @@
     <None Remove="Imgs\add.png" />
     <None Remove="Imgs\delete.png" />
     <None Remove="Imgs\detail.png" />
+    <None Remove="Imgs\edit.png" />
     <None Remove="Imgs\ReservationCard.png" />
     <None Remove="Imgs\search.png" />
+    <None Remove="Imgs\select.png" />
+    <None Remove="Imgs\tick.png" />
     <None Remove="Imgs\update.png" />
     <None Remove="resources\Icons\cross.png" />
   </ItemGroup>
@@ -33,8 +36,11 @@
     <Resource Include="Imgs\detail.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Imgs\edit.png" />
     <Resource Include="Imgs\ReservationCard.png" />
     <Resource Include="Imgs\search.png" />
+    <Resource Include="Imgs\select.png" />
+    <Resource Include="Imgs\tick.png" />
     <Resource Include="Imgs\update.png" />
     <Resource Include="resources\Icons\cross.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

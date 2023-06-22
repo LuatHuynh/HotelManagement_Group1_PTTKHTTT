@@ -7,7 +7,16 @@
         mc:Ignorable="d"
         Title="List Phone" Height="675" Width="1200" Loaded="Window_Loaded">
     <Window.Resources>
-        
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBox x:Name="PART_TextBox" Text="{Binding Path=SelectedDate, 
+                            RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat='dd/MM/yyyy', TargetNullValue=''}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <DockPanel LastChildFill="True">
         <Fluent:Ribbon DockPanel.Dock="Top" HorizontalContentAlignment="Stretch">
@@ -26,6 +35,7 @@
                            Click="ReservationCardsTab"/>
                     <Fluent:Button Name="MakeingAReservation" 
                            Header="Making a reservation" 
+                           Icon="Imgs/add.png"
                            Click="MakingReservationTabs"/>
                 </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
