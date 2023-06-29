@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelManagement
+namespace HotelManagement.UI.TouristTab
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ScreenAddTourist.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ScreenAddTourist : UserControl
     {
-        public MainWindow()
+        public ScreenAddTourist()
         {
             InitializeComponent();
         }
-
     }
 }

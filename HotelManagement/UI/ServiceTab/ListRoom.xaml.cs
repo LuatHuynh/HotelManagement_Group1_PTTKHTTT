@@ -13,17 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelManagement
+namespace HotelManagement.UI.ServiceTab
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ListRoom.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ListRoom : UserControl
     {
-        public MainWindow()
+        public ListRoom()
         {
             InitializeComponent();
         }
 
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

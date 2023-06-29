@@ -10,13 +10,17 @@
   <ItemGroup>
     <None Remove="resources\font\Dosis.ttf" />
     <None Remove="resources\Icons\cross.png" />
+    <None Remove="resources\Icons\detail.png" />
     <None Remove="resources\Icons\reception.png" />
+    <None Remove="resources\Icons\search.png" />
+    <None Remove="resources\Icons\update.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="resources\font\Dosis.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="resources\Icons\detail.png" />
     <Resource Include="resources\Icons\reception.png" />
   </ItemGroup>
 
@@ -29,6 +33,8 @@
     <Resource Include="resources\Icons\cross.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="resources\Icons\search.png" />
+    <Resource Include="resources\Icons\update.png" />
   </ItemGroup>
 
 </Project>

@@ -4,6 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:adminViews="clr-namespace:HotelManagement.UI.Admin"
+        xmlns:serviceViews="clr-namespace:HotelManagement.UI.ServiceTab"
+        xmlns:touristViews="clr-namespace:HotelManagement.UI.TouristTab"
+        xmlns:serviceInvoicesListViews="clr-namespace:HotelManagement.UI.ServiceTab"
+        xmlns:touristInvoicesListViews="clr-namespace:HotelManagement.UI.TouristTab"
         xmlns:adminVms="clr-namespace:HotelManagement.ViewModel.Admin"
         xmlns:local="clr-namespace:HotelManagement"
         mc:Ignorable="d"
@@ -11,13 +15,16 @@
         WindowStyle="none"
         ResizeMode="NoResize">
     <Grid>
-        <Grid.Resources>
+        <!--<Grid.Resources>
             <DataTemplate DataType="{x:Type adminVms:AdminMainViewModel}">
                 <adminViews:AdminMainScreen></adminViews:AdminMainScreen>
             </DataTemplate>
         </Grid.Resources>
-        <ContentControl Content="{Binding CurrentViewModel}"></ContentControl>
-        
+        <ContentControl Content="{Binding CurrentViewModel}"></ContentControl>-->
+        <!--<serviceViews:ScreenServiceProduct></serviceViews:ScreenServiceProduct>-->
+        <!--<touristViews:ScreenAddTourist></touristViews:ScreenAddTourist>-->
+        <touristInvoicesListViews:ScreenListTourist></touristInvoicesListViews:ScreenListTourist>
+        <!--<serviceInvoicesListViews:ScreenListService></serviceInvoicesListViews:ScreenListService>-->
         <!--<adminViews:AdminMainScreen DataContext="{Binding _currentViewModel}"></adminViews:AdminMainScreen>-->
     </Grid>
 </Window>
