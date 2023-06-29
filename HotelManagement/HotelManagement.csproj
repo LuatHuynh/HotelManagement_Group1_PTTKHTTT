@@ -14,35 +14,12 @@
     <None Remove="Imgs\ReservationCard.png" />
     <None Remove="Imgs\search.png" />
     <None Remove="Imgs\update.png" />
-    <None Remove="resources\font\Dosis.ttf" />
     <None Remove="resources\Icons\cross.png" />
-    <None Remove="resources\Icons\detail.png" />
-    <None Remove="resources\Icons\reception.png" />
-    <None Remove="resources\Icons\search.png" />
-    <None Remove="resources\Icons\update.png" />
-    <None Remove="resources\Icons\selective.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="resources\font\Dosis.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="resources\Icons\detail.png" />
-    <Resource Include="resources\Icons\reception.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.7">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,11 +37,6 @@
     <Resource Include="Imgs\search.png" />
     <Resource Include="Imgs\update.png" />
     <Resource Include="resources\Icons\cross.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="resources\Icons\search.png" />
-    <Resource Include="resources\Icons\update.png" />
-    <Resource Include="resources\Icons\selective.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
