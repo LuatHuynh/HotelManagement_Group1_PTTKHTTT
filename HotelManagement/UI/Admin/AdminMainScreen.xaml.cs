@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HotelManagement.Stores;
+using HotelManagement.ViewModel.Admin;
+using HotelManagement.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,35 +13,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelManagement.UI.Admin.MainScreen
+namespace HotelManagement.UI.Admin
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for AdminMainScreen.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class AdminMainScreen : UserControl
     {
-        public Window1()
+    
+        public AdminMainScreen()
         {
             InitializeComponent();
         }
 
-
         private void dragApplication(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
-                DragMove();
-            }
-        }
+                Window parentWindow = Window.GetWindow(this);
+                parentWindow.DragMove();
 
-   
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ClickCount == 2)
-            {
-                Close();
             }
         }
     }

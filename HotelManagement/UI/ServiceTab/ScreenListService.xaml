@@ -1,0 +1,152 @@
+﻿<UserControl x:Class="HotelManagement.UI.ServiceTab.ScreenListService"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotelManagement.UI.ServiceTab"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="530" d:DesignWidth="1200" Loaded="UserControl_Loaded">
+    <StackPanel>
+        <StackPanel Height="30"></StackPanel>
+        <DockPanel LastChildFill="True" Margin="0 10 0 10" Height="477">
+
+            <StackPanel HorizontalAlignment="Center" DockPanel.Dock="Bottom" Height="35"  Orientation="Horizontal">
+                <Button x:Name="previousButton" Width="80" Height="35" Content="Previous"/>
+                <TextBlock Name="pagingInfo" Margin="10">
+                    <Run x:Name="curP" d:Text="3"/>
+                    / 
+                    <Run x:Name="totalP" d:Text="5"/>
+                </TextBlock>
+                <Button x:Name="nextButton" Width="80" Height="35" Content="Next"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+                <Label FontSize="20">Service Invoice List</Label>
+                <DockPanel LastChildFill="True"> 
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                        <Grid Margin="20 0 0 0">
+                            <TextBox  Width="120"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchByInvoiceIdTextBox" Margin="5"/>
+                            <TextBlock IsHitTestVisible="False" Text="Invoice ID" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="DarkGray">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Text, ElementName=SearchByInvoiceIdTextBox}" Value="">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Grid>
+                        <Button>
+                            <Image Width="20" Source="../../resources/icons/search.png"></Image>
+                        </Button>
+                        <Grid Margin="20 0 0 0">
+                            <TextBox  Width="120"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchFromTextBox" Margin="5"/>
+                            <TextBlock IsHitTestVisible="False" Text="From" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="DarkGray">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Text, ElementName=SearchFromTextBox}" Value="">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Grid>
+                        <Label>-</Label>
+                        <Grid>
+                            <TextBox  Width="120"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchToTextBox" Margin="5"/>
+                            <TextBlock IsHitTestVisible="False" Text="To" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="DarkGray">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Text, ElementName=SearchToTextBox}" Value="">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Grid>
+                        <Button>
+                            <Image Width="20" Source="../../resources/icons/search.png"></Image>
+                        </Button>
+                    </StackPanel>
+
+                    <ListView
+                x:Name="serviceInvoicesListView"
+                Background="Transparent"
+                BorderThickness="0.3 0 0 0"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <ListView.Resources>
+                            <Style TargetType="GridViewColumnHeader">
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="Padding" Value="0 5"/>
+                            </Style>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn 
+                            Header="Invoice ID" 
+                            Width="150" 
+                            DisplayMemberBinding="{Binding InvoiceID}"/>
+                                <GridViewColumn 
+                            Header="Room ID" 
+                            Width="150"
+                            DisplayMemberBinding="{Binding RoomID}" />
+                                <GridViewColumn 
+                            Header="Booking Date" 
+                            Width="250"
+                            DisplayMemberBinding="{Binding BookingDate}" />
+                                <GridViewColumn 
+                            Header="Status" 
+                            Width="150"
+                            DisplayMemberBinding="{Binding Status}" />
+                                <GridViewColumn 
+                            Header="Notes" 
+                            Width="345">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Notes}" TextWrapping="Wrap" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Update" Width="150">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button
+                                    Background="Transparent"
+                                    BorderThickness="0" Name="btn5">
+                                                <Image Width="30"
+                                        Source="../../resources/icons/update.png"/>
+                                            </Button>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </DockPanel>
+
+            </StackPanel>
+        </DockPanel>
+    </StackPanel>
+</UserControl>
