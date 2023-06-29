@@ -1,17 +1,16 @@
 ﻿using HotelManagement.Command;
+using HotelManagement.Services;
+using HotelManagement.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using HotelManagement.Services;
-using System.Windows.Navigation;
-using HotelManagement.Stores;
 
 namespace HotelManagement.ViewModel.Admin
 {
-   public class AdminAddUserViewModel:ViewModelBase
+    public class AdminAddRegulationModel: ViewModelBase
     {
         public string _userIDNo;
         public string _name;
@@ -19,9 +18,11 @@ namespace HotelManagement.ViewModel.Admin
         public string _password;
         public string _phone;
         public string _address;
-        public string UserIDNo { 
+        public string UserIDNo
+        {
             get { return _userIDNo; }
-            set { 
+            set
+            {
                 _userIDNo = value;
                 OnPropertyChanged(nameof(UserIDNo));
             }
@@ -31,7 +32,7 @@ namespace HotelManagement.ViewModel.Admin
             get { return _name; }
             set
             {
-                _userIDNo= value;
+                _userIDNo = value;
                 OnPropertyChanged(nameof(Name));
             }
         }
@@ -40,7 +41,7 @@ namespace HotelManagement.ViewModel.Admin
             get { return _password; }
             set
             {
-                _password= value; OnPropertyChanged(nameof(Password));
+                _password = value; OnPropertyChanged(nameof(Password));
             }
         }
         public string Phone
@@ -48,7 +49,7 @@ namespace HotelManagement.ViewModel.Admin
             get { return _phone; }
             set
             {
-                _phone= value; OnPropertyChanged(nameof(Phone));
+                _phone = value; OnPropertyChanged(nameof(Phone));
             }
         }
         public string Address
@@ -56,17 +57,15 @@ namespace HotelManagement.ViewModel.Admin
             get { return _address; }
             set
             {
-                _address= value; OnPropertyChanged(nameof(Address));
+                _address = value; OnPropertyChanged(nameof(Address));
             }
         }
-        public ICommand addNewUser { get; set; }
+        public ICommand viewRegulationList { get; set; }
 
-        public AdminAddUserViewModel(NavigationStore navigationStore)
+        public AdminAddRegulationModel(NavigationStore navigationStore)
         {
-      
-            addNewUser = new NavigateCommand(new NavigateService( navigationStore,()=> new AdminViewUserModel(navigationStore)));
-        }
 
-  
+            viewRegulationList = new NavigateCommand(new NavigateService(navigationStore, () => new AdminViewRegulationModel(navigationStore)));
+        }
     }
 }

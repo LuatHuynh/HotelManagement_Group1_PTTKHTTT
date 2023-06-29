@@ -85,20 +85,28 @@
                 Text="Home"
                 Style="{StaticResource ResourceKey=NavStyle}"
                 >
-
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding Home}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
         </TextBlock>
         <TextBlock
+                
                 Grid.Column="1"
                 TextWrapping="Wrap"
                 Text="Room Management"
                    Style="{StaticResource ResourceKey=NavStyle}">
-
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding Room}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
         </TextBlock>
         <TextBlock
                 Grid.Column="2"
                 TextWrapping="Wrap"
                 Text="Regulation Management"
                   Style="{StaticResource ResourceKey=NavStyle}">
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding Regulation}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
 
         </TextBlock>
 
@@ -107,7 +115,9 @@
                 TextWrapping="Wrap"
                 Text="Account Management"
                   Style="{StaticResource ResourceKey=NavStyle}">
-
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding UserManagement}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
         </TextBlock>
         <Image Source="../../resources/Icons/cross.png"
                    Grid.Column="9"
