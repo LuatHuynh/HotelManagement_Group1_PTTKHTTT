@@ -1,5 +1,5 @@
 ﻿using Fluent;
-using HotelManagement.UI.BookingTab;
+using HotelManagement.UI.Checkout;
 using System.ComponentModel;
 using System.Windows;
 
@@ -17,19 +17,13 @@ namespace HotelManagement
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new ReservationCards();
+            MainContent.Content = new CreateFeedback();
         }
 
-        private void ReservationCardsTab(object sender, RoutedEventArgs e)
+        private void CreateFeedbackTab(object sender, RoutedEventArgs e)
         {
             MainContent.Content = null;
-            MainContent.Content = new ReservationCards();
-        }
-
-        private void MakingReservationTabs(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = null;
-            MainContent.Content = new MakingReservation();
+            MainContent.Content = new CreateFeedback();
         }
     }
 }

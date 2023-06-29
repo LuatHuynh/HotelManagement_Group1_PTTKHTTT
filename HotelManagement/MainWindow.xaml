@@ -27,20 +27,13 @@
                 </Fluent:Backstage>
             </Fluent:Ribbon.Menu>-->
             <!--Tabs-->
-            <Fluent:RibbonTabItem Header="Booking">
+            <Fluent:RibbonTabItem Header="Checkout">
                 <Fluent:RibbonGroupBox Header="Action">
-                    <Fluent:Button Name="ReservationCards" 
-                           Header="Reservation cards"
-                           Icon="Imgs/ReservationCard.png"
-                           Click="ReservationCardsTab"/>
-                    <Fluent:Button Name="MakeingAReservation" 
-                           Header="Making a reservation" 
-                           Icon="Imgs/add.png"
-                           Click="MakingReservationTabs"/>
+                    <Fluent:Button Name="CreateFeedback" 
+                           Header="Create feedback"
+                           Icon="Imgs/edit.png"
+                           Click="CreateFeedbackTab"/>
                 </Fluent:RibbonGroupBox>
-            </Fluent:RibbonTabItem>
-            <Fluent:RibbonTabItem Header="Regulations">
-                
             </Fluent:RibbonTabItem>
         </Fluent:Ribbon>
         <ContentControl x:Name="MainContent" />
