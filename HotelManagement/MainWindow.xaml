@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
         mc:Ignorable="d"
-        Title="List Phone" Height="675" Width="1200" Loaded="Window_Loaded">
+        Title="Hotel Management" Height="675" Width="1200" Loaded="Window_Loaded">
     <Window.Resources>
         <Style TargetType="{x:Type DatePickerTextBox}">
             <Setter Property="Control.Template">
