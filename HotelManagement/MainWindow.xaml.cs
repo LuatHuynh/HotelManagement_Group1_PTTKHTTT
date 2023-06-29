@@ -17,7 +17,7 @@ namespace HotelManagement
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new CreateFeedback();
+            MainContent.Content = new MainWindow();
         }
 
         private void CreateFeedbackTab(object sender, RoutedEventArgs e)
