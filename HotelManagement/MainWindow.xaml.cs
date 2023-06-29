@@ -53,6 +53,7 @@ namespace HotelManagement
         {
             MainContent.Content = null;
             MainContent.Content = new StaffInfo();
+        }
         private void AddServiceClick(object sender, RoutedEventArgs e)
         {
             MainContent.Content = null;

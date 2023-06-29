@@ -28,6 +28,7 @@ namespace HotelManagement.UI.Login
         {
             var mainScreen = new MainWindow();
             mainScreen.Show();
+            this.Close();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

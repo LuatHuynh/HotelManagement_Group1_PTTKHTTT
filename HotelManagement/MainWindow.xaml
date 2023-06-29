@@ -45,7 +45,9 @@
                            Header="Invoices"
                            Icon="Imgs/ReservationCard.png"
                            Click="CheckOutTab"/>
-			 <!--Add service-->
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <!--Add service-->
 		    <Fluent:RibbonTabItem Header="Service">
                 <Fluent:RibbonGroupBox Header="Action">
                     <Fluent:Button Name="AddService" 
