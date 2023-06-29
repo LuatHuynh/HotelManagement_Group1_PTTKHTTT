@@ -133,8 +133,9 @@
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <Button
-                                    Background="Transparent"
-                                    BorderThickness="0" Name="btn5">
+                                                Background="Transparent"
+                                                BorderThickness="0" Name="btn5">   
+                                                
                                                 <Image Width="30"
                                         Source="../../resources/icons/update.png"/>
                                             </Button>

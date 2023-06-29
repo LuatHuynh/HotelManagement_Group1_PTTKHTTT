@@ -30,7 +30,7 @@ namespace HotelManagement
                 DataContext = new MainViewModel(_navigationStore)
             
             };
-            MainWindow.Show();
+            //MainWindow.Show();
             base.OnStartup(e);
         }
 }

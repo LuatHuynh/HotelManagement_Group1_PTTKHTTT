@@ -132,8 +132,9 @@
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <Button
-                                    Background="Transparent"
-                                    BorderThickness="0" Name="btn5">
+                                                Background="Transparent"
+                                                BorderThickness="0" Name="btn5"
+                                                Click="DetailTourist_Click">
                                                 <Image Width="30"
                                         Source="../../resources/icons/detail.png"/>
                                             </Button>

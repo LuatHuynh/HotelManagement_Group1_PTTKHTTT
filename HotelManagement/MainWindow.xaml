@@ -40,9 +40,36 @@
                 </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
             <Fluent:RibbonTabItem Header="Regulations">
-                
+               
+            </Fluent:RibbonTabItem>
+			 <!--Add service-->
+		    <Fluent:RibbonTabItem Header="Service">
+                <Fluent:RibbonGroupBox Header="Action">
+                    <Fluent:Button Name="AddService" 
+                           Header="Add Service"
+                           Icon="Imgs/add.png"
+                           Click="AddServiceClick"/>
+                    <Fluent:Button Name="ListServiceInvoices" 
+                           Header="View List Service Invoices" 
+                           Icon="Imgs/add.png"
+                           Click="ViewListInvoiceClick"/>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+			 <!--Add tourist-->
+		    <Fluent:RibbonTabItem Header="Tourist">
+                <Fluent:RibbonGroupBox Header="Action">
+                    <Fluent:Button Name="AddTourist" 
+                           Header="Add Tourist"
+                           Icon="Imgs/add.png"
+                           Click="AddTouristClick"/>
+                    <Fluent:Button Name="ViewListTourist" 
+                           Header="View List Tourist" 
+                           Icon="Imgs/add.png"
+                           Click="ViewListTouristClick"/>
+                </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
         </Fluent:Ribbon>
+		    
         <ContentControl x:Name="MainContent" />
 
     </DockPanel>
