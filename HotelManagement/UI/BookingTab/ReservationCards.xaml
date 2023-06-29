@@ -8,7 +8,7 @@
              Background="White"
              d:DesignHeight="530" d:DesignWidth="1200" Loaded="UserControl_Loaded">
     <Grid>
-        <DockPanel LastChildFill="True" Margin="0 10 0 5">
+        <DockPanel LastChildFill="True" Margin="0 10 0 10">
             
             <StackPanel HorizontalAlignment="Center" DockPanel.Dock="Bottom" Height="35"  Orientation="Horizontal">
                 <Button x:Name="previousButton" Width="80" Height="35" Content="Previous"/>
@@ -61,7 +61,7 @@
                             <Image Width="20" Source="/Imgs/search.png"></Image>
                         </Button>
                         <Grid Margin="20 0 0 0">
-                            <DatePicker  Width="120"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchFromTextBox" Margin="5"/>
+                            <TextBox  Width="120"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchFromTextBox" Margin="5"/>
                             <TextBlock IsHitTestVisible="False" Text="From" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="DarkGray">
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
@@ -77,7 +77,7 @@
                         </Grid>
                         <Label>-</Label>
                         <Grid>
-                            <DatePicker  Width="120"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchToTextBox" Margin="5"/>
+                            <TextBox  Width="120"  VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="SearchToTextBox" Margin="5"/>
                             <TextBlock IsHitTestVisible="False" Text="To" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Foreground="DarkGray">
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
@@ -97,11 +97,10 @@
                     </StackPanel>
 
                     <ListView
-                    x:Name="reservationCardsListView"
-                    ScrollViewer.CanContentScroll="False"
-                    Background="Transparent"
-                    BorderThickness="0.3 0 0 0"
-                    ScrollViewer.VerticalScrollBarVisibility="Auto" Height="410">
+                x:Name="reservationCardsListView"
+                Background="Transparent"
+                BorderThickness="0.3 0 0 0"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -144,11 +143,11 @@
                             DisplayMemberBinding="{Binding DepartureDate}" />
                                 <GridViewColumn 
                             Header="Status" 
-                            Width="110"
+                            Width="120"
                             DisplayMemberBinding="{Binding Status}" />
                                 <GridViewColumn 
                             Header="Notes" 
-                            Width="260">
+                            Width="345">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding Notes}" TextWrapping="Wrap" />
@@ -156,40 +155,14 @@
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
 
-                                <GridViewColumn Header="Detail" Width="50">
+                                <GridViewColumn Header="Details" Width="100">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <Button
-                                                Background="Transparent"
-                                                Click="DetailReservationCardsBtn_Click"
-                                                BorderThickness="0" Name="btn5">
+                                    Background="Transparent"
+                                    BorderThickness="0" Name="btn5">
                                                 <Image Width="30"
-                                                    Source="/Imgs/detail.png"/>
-                                            </Button>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn Header="Edit" Width="50">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Button
-                                            Background="Transparent"
-                                            Click="EditDetailReservationCardsBtn_Click"
-                                            BorderThickness="0" Name="btn5">    
-                                                <Image Width="30"
-                                            Source="/Imgs/edit.png"/>
-                                            </Button>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn Header="Delete" Width="50">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Button
-                                            Background="Transparent"
-                                            BorderThickness="0" Name="btn5">    
-                                                <Image Width="30"
-                                            Source="/Imgs/delete.png"/>
+                                        Source="/Imgs/detail.png"/>
                                             </Button>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>

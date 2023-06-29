@@ -14,7 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static HotelManagement.UI.BookingTab.MakingReservation;
 
 namespace HotelManagement.UI.BookingTab
 {
@@ -73,34 +72,6 @@ namespace HotelManagement.UI.BookingTab
             reservationCardsListView.ItemsSource = reservationCards;
             curP.Text = "3";
             totalP.Text = "5";
-        }
-
-        private void EditDetailReservationCardsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            var screen = new DetailReservationCardWindow();
-
-            if (screen.ShowDialog() == true)
-            {
-
-            }
-            else
-            {
-                //do nothing
-            }
-        }
-
-        private void DetailReservationCardsBtn_Click(object sender, RoutedEventArgs e)
-        {
-            var screen = new DetailReservationCardWindow();
-
-            if (screen.ShowDialog() == true)
-            {
-
-            }
-            else
-            {
-                //do nothing
-            }
         }
     }
 }
