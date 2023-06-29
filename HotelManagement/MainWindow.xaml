@@ -39,9 +39,31 @@
                            Click="MakingReservationTabs"/>
                 </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
-            <Fluent:RibbonTabItem Header="Regulations">
-                
+            <Fluent:RibbonTabItem Header="Check out">
+                <Fluent:RibbonGroupBox Header="Action">
+                    <Fluent:Button Name="Invoices" 
+                           Header="Invoices"
+                           Icon="Imgs/ReservationCard.png"
+                           Click="CheckOutTab"/>
+                </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem Header="Room regulation">
+                <Fluent:RibbonGroupBox Header="Action">
+                    <Fluent:Button Name="AllRegulation" 
+                           Header="All regulation"
+                           Icon="Imgs/ReservationCard.png"
+                           Click="RoomRegulationTab"/>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem Header="Account">
+                <Fluent:RibbonGroupBox Header="Action">
+                    <Fluent:Button Name="Account" 
+                           Header="Staff info"
+                           Icon="Imgs/ReservationCard.png"
+                           Click="StaffInfoTab"/>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            
         </Fluent:Ribbon>
         <ContentControl x:Name="MainContent" />
 

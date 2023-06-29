@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="HotelManagement.UI.StaffInfoTab.StaffInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotelManagement.UI.StaffInfoTab"
+             mc:Ignorable="d" 
+             Background="White"
+             d:DesignHeight="530" d:DesignWidth="1200">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Margin" Value="0,5"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="BorderBrush" Value="Gray"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="22.96"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Account infomation" FontSize="24" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" FontWeight="Bold" />
+
+
+
+        <Label Content="Mã nhân viên:" Grid.Row="1" Grid.Column="1" Margin="82,90,928,-77" FontWeight="Bold"/>
+        <TextBox Name="txtMaNhanVien" Grid.Row="1" IsReadOnly="True" Grid.ColumnSpan="2" Margin="83,121,698,-147">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Label Content="Họ tên:" Grid.Row="1" Grid.Column="1" Margin="84,217,927,-207"  FontWeight="Bold"/>
+        <TextBox Name="txtHoTen" Grid.Row="1" Margin="84,255,697,-281" Grid.Column="1">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Label Content="Personal Indentification:" Grid.Row="1" Grid.Column="1" Margin="698,90,313,-85"  FontWeight="Bold"/>
+        <TextBox Name="pId" Grid.Row="1" Grid.ColumnSpan="2" Margin="698,121,83,-146">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Label Content="Telephone number:" Grid.Row="1" Grid.Column="1" Margin="698,220,313,-207"  FontWeight="Bold"/>
+        <TextBox Name="phoneNumber" Grid.Row="1" Grid.ColumnSpan="2" Margin="698,255,83,-281">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Label Content="Address:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="84,355,1012,-345"  FontWeight="Bold"/>
+        <TextBox Name="address" Grid.Row="1" Margin="84,389,697,-415" Grid.Column="1">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Label Content="Position:" Grid.Row="1" Grid.Column="1" Margin="698,355,313,-343"  FontWeight="Bold"/>
+        <ComboBox Name="position" Grid.Row="1" Margin="698,389,83,-415" Grid.Column="1">
+            <ComboBoxItem Content="Lễ tân" />
+            <ComboBoxItem Content="Bellman" />
+            <ComboBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20" />
+                </Style>
+            </ComboBox.Resources>
+        </ComboBox>
+
+
+
+        <Button Content="Edit information" Grid.Row="1" Grid.Column="1" 
+                Click="UpdateInfoButton_Click" Background="SkyBlue" 
+                Foreground="White" Padding="10,5" Margin="303,501,697,-543" 
+                BorderThickness="0" />
+
+        <Button Content="Change password" Grid.Row="1" Grid.Column="1" 
+                Click="UpdateInfoButton_Click" Background="SkyBlue" 
+                Foreground="White" Padding="10,5" Margin="698,501,302,-543" 
+                BorderThickness="0" />
+    </Grid>
+</UserControl>

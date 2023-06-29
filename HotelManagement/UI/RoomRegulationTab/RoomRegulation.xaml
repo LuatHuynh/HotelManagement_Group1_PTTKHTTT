@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="HotelManagement.UI.RoomRegulationTab.RoomRegulation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotelManagement.UI.RoomRegulationTab"
+             mc:Ignorable="d"
+             d:DesignHeight="530" d:DesignWidth="1200">
+    <Grid>
+        <TextBlock Text="DANH SÁCH QUY ĐỊNH PHÒNG" FontSize="28" Margin="386,13,319,10" FontWeight="Bold" />
+
+        <ListView x:Name="roomTypeListView" Margin="10,59,10,66" d:ItemsSource="{d:SampleData ItemCount=10}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="#b9ccb0"/>
+                    <Setter Property="BorderBrush" Value="#b9ccb0"/>
+                    <Setter Property="BorderThickness" Value="0,15,0,15"/>
+                    <Setter Property="Margin" Value="15,15,15,0"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                                    <GridViewRowPresenter Content="{TemplateBinding Content}"
+                                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Mã phòng" DisplayMemberBinding="{Binding RoomCode}" Width="150" />
+                    <GridViewColumn Header="Loại phòng" DisplayMemberBinding="{Binding RoomType}" Width="150"/>
+                    <GridViewColumn Header="Giá phòng" DisplayMemberBinding="{Binding RoomPrice}" Width="150"/>
+                    <GridViewColumn Header="Mô tả" DisplayMemberBinding="{Binding Description}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+
+        <Button Content="Xem quy định phòng" HorizontalAlignment="Center" 
+                VerticalAlignment="Top" Margin="0,598,0,0" Width="140" 
+                Click="LoadData_Click" Height="30"/>
+    </Grid>
+</UserControl>
