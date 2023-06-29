@@ -25,13 +25,13 @@ namespace HotelManagement
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            _navigationStore.CurrentViewModel = new AdminMainViewModel();
-            MainWindow = new MainWindow() {
-                DataContext = new MainViewModel(_navigationStore)
+            //_navigationStore.CurrentViewModel = new AdminMainViewModel();
+            //MainWindow = new MainWindow() {
+            //    DataContext = new MainViewModel(_navigationStore)
             
-            };
-            //MainWindow.Show();
-            base.OnStartup(e);
+            //};
+            ////MainWindow.Show();
+            //base.OnStartup(e);
         }
 }
 }
