@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelManagement.UI.BookingTab;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -51,6 +52,20 @@ namespace HotelManagement.UI.TouristTab
                 new TouristInvoice{InvoiceID =7, RoomID=4, BookingDate= DateTime.Now.AddDays(3), CustomerName = "Nguyễn Quốc Khoa", Notes = "Không có yêu cầu gì" },
             };
             touristInvoicesListView.ItemsSource = _touristInvoices;
+        }
+
+        private void DetailTourist_Click(object sender, RoutedEventArgs e)
+        {
+            var screen = new DeltailTouristWindow();
+
+            if (screen.ShowDialog() == true)
+            {
+
+            }
+            else
+            {
+                //do nothing
+            }
         }
     }
 }

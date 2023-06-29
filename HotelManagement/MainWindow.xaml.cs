@@ -3,6 +3,8 @@ using HotelManagement.UI.BookingTab;
 using HotelManagement.UI.CheckoutTab;
 using HotelManagement.UI.RoomRegulationTab;
 using HotelManagement.UI.StaffInfoTab;
+using HotelManagement.UI.ServiceTab;
+using HotelManagement.UI.TouristTab;
 using System.ComponentModel;
 using System.Windows;
 
@@ -51,6 +53,28 @@ namespace HotelManagement
         {
             MainContent.Content = null;
             MainContent.Content = new StaffInfo();
+        private void AddServiceClick(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = null;
+            MainContent.Content = new ScreenServiceProduct();
+        }
+
+        private void ViewListInvoiceClick(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = null;
+            MainContent.Content = new ScreenListService();
+        }
+
+        private void AddTouristClick(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = null;
+            MainContent.Content = new ScreenAddTourist();
+        }
+
+        private void ViewListTouristClick(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = null;
+            MainContent.Content = new ScreenListTourist();
         }
     }
 }
