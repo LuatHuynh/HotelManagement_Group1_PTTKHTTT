@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="HotelManagement.UI.ServiceTab.ScreenListService"
+﻿ <UserControl x:Class="HotelManagement.UI.ServiceTab.ScreenListService"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -120,16 +120,16 @@
                             Width="150"
                             DisplayMemberBinding="{Binding Status}" />
                                 <GridViewColumn 
-                            Header="Notes" 
+                            Header="Service Name" 
                             Width="345">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding Notes}" TextWrapping="Wrap" />
+                                            <TextBlock Text="{Binding ServiceName}" TextWrapping="Wrap" />
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
 
-                                <GridViewColumn Header="Update" Width="150">
+                                <GridViewColumn Header="Delete" Width="150">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <Button
@@ -137,7 +137,7 @@
                                                 BorderThickness="0" Name="btn5">   
                                                 
                                                 <Image Width="30"
-                                        Source="../../resources/icons/update.png"/>
+                                        Source="../../resources/icons/delete.png"/>
                                             </Button>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>

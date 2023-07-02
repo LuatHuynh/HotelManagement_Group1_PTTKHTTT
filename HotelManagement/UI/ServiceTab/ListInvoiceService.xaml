@@ -10,7 +10,7 @@
         <ListView x:Name="ListInvoicesService">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" Width="30">
+                    <GridViewColumn Header="ID hoá đơn" Width="70">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Border BorderBrush="Gray" BorderThickness="0,0,1,1" Background="White">
@@ -20,7 +20,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="ID dich vu" Width="70">
+                    <GridViewColumn Header="ID dịch vụ" Width="80">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Border BorderBrush="Gray" BorderThickness="0,0,1,1" Background="White">
@@ -30,11 +30,11 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
-                    <GridViewColumn Header="So luong" Width="65">
+                    <GridViewColumn Header="ID Phòng" Width="65">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Border BorderBrush="Gray" BorderThickness="0,0,1,1" Background="White">
-                                    <TextBlock Text="{Binding Quantity}" Margin="0"/>
+                                    <TextBlock Text="{Binding RoomID}" Margin="0"/>
                                 </Border>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

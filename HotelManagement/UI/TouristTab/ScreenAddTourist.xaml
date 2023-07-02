@@ -30,12 +30,15 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <Label Content="Nhập tên người đại diện:" Margin="100,0,0,0"></Label>
-                    <TextBox Height="30" Margin="-80,10,0,0" Width="300"></TextBox>
+                    <Label Content="Nhập tên người đại diện:" Margin="100,0,0,0"
+                           FontSize="14" FontWeight="DemiBold"></Label>
+                    <TextBox Height="30" Margin="-50,10,0,0" Width="300"
+                             VerticalContentAlignment="Center" FontSize="14"></TextBox>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <Label Content="Nhập CCCD người  đại diện:" Margin="100,0,0,0"></Label>
-                    <TextBox Height="30" Margin="-80,10,0,0" Width="300"></TextBox>
+                    <Label Content="Nhập CCCD người  đại diện:" Margin="100,0,0,0"
+                           FontSize="14" FontWeight="DemiBold"></Label>
+                    <TextBox Height="30" Margin="-80,10,0,0" Width="300" FontSize="14"></TextBox>
                 </StackPanel>
                 
             </Grid>
@@ -45,35 +48,42 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <Label Content="Chọn gói du lịch:" Margin="100,0,0,0"></Label>
-                    <ComboBox x:Name="listTourist" SelectedItem="{Binding SelectedTourist}" Margin="-80,10,0,0" Width="300">
-                        <ComboBoxItem Content="Gói du lịch đảo khỉ - 2 ngày 1 đêm" />
-                        <ComboBoxItem Content="Gói du lịch đảo gà - 1 ngày" />
-                        <ComboBoxItem Content="Gói du lịch đảo chim - 1 ngày" />
-                        <ComboBoxItem Content="Gói du lịch đảo heo - 1 ngày" />
-                        <ComboBoxItem Content="Gói du lịch đảo ngựa - 1 ngày" />
+                    <Label Content="Chọn gói du lịch:" Margin="100,0,0,0"
+                           FontSize="14" FontWeight="DemiBold"></Label>
+                    <ComboBox x:Name="listTourist" SelectedItem="{Binding SelectedTourist}" 
+                              Margin="-50,10,0,0" Width="300" FontSize="14">
+                        <ComboBoxItem Content="Gói du lịch động Phong Nha" />
+                        <ComboBoxItem Content="Gói du lịch đảo Hang Sơn Đòong" />
+                        <ComboBoxItem Content="Gói du lịch biển Nhật Lệ" />
+                        <ComboBoxItem Content="Gói du lịch bãi đá nhảy" />
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <Label Content="Nhập thời gian đi:" Margin="100,0,0,0"></Label>
+                    <Label Content="Nhập thời gian đi:" Margin="100,0,0,0"
+                           FontSize="14" FontWeight="DemiBold"></Label>
                     <DatePicker Width="300" Margin="-70,0,0,0" x:Name="datePicker" SelectedDateFormat="Short" ></DatePicker>
                 </StackPanel>
                 
             </Grid>
             <StackPanel Grid.Row="2">
-                <Label Content="Nhập số người tham gia:" Margin="100,0,0,0"></Label>
-                <TextBox Height="30" Margin="-650,10,0,0" Width="300"></TextBox>
+                <Label Content="Nhập số người tham gia:" Margin="100,0,0,0"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBox Height="30" Margin="-650,10,0,0" Width="300" FontSize="14"></TextBox>
             </StackPanel>
             <StackPanel Grid.Row="3">
-                <Label Content="Nhập yêu cầu thêm:" Margin="100,0,0,0"></Label>
-                <TextBox Height="30" Margin="-350,10,0,0" Width="600"></TextBox>
+                <Label Content="Nhập yêu cầu thêm:" Margin="100,0,0,0"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBox Height="30" Margin="-350,10,0,0" Width="600" FontSize="14"></TextBox>
             </StackPanel>
             <StackPanel Grid.Row="4">
-                <Label Content="Loại hình đưa đón:" Margin="100,0,0,0"></Label>
-                <ComboBox x:Name="transportComboBox" SelectedItem="{Binding SelectedTransport}" Margin="-700,10,0,0" Width="250">
+                <Label Content="Loại hình đưa đón:" Margin="100,0,0,0"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <ComboBox x:Name="transportComboBox" 
+                          SelectedItem="{Binding SelectedTransport}" 
+                          Margin="-700,10,0,0" Width="250" FontSize="14">
+                    <ComboBoxItem Content="Xe du lịch" />
+                    <ComboBoxItem Content="Tự túc" />
                     <ComboBoxItem Content="Xe ô tô" />
-                    <ComboBoxItem Content="Xe buýt" />
-                    <ComboBoxItem Content="Xe đạp" />
                 </ComboBox>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right" Grid.Row="5">

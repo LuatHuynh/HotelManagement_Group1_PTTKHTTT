@@ -56,7 +56,7 @@
                            Click="AddServiceClick"/>
                     <Fluent:Button Name="ListServiceInvoices" 
                            Header="View List Service Invoices" 
-                           Icon="Imgs/add.png"
+                           Icon="../../resources/icons/listservice.png"
                            Click="ViewListInvoiceClick"/>
                 </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>
@@ -69,7 +69,7 @@
                            Click="AddTouristClick"/>
                     <Fluent:Button Name="ViewListTourist" 
                            Header="View List Tourist" 
-                           Icon="Imgs/add.png"
+                           Icon="../../resources/icons/listtourist.png"
                            Click="ViewListTouristClick"/>
                 </Fluent:RibbonGroupBox>
             </Fluent:RibbonTabItem>

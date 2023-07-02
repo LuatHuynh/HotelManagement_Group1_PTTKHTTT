@@ -33,7 +33,7 @@ namespace HotelManagement.UI.ServiceTab
             public string Status { get; set; }
             public double TotalMoney { get; set; }  
             public DateTime CreateAt { get; set; }
-            public int Quantity { get; set; }
+            public int RoomID { get; set; }
             public string ServiceID { get; set; }
             public event PropertyChangedEventHandler? PropertyChanged;
         }
@@ -42,14 +42,16 @@ namespace HotelManagement.UI.ServiceTab
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             _invoices = new ObservableCollection<InvoiceService> { 
-                new InvoiceService{InvoiceServiceID="I01", Status="Da dung", 
-                    TotalMoney=20000, CreateAt=DateTime.Now.AddDays(1), Quantity=2, ServiceID="SV02"}, 
-                new InvoiceService{InvoiceServiceID="I02", Status="Chua su dung", 
-                    TotalMoney=44000, CreateAt=DateTime.Now.AddDays(3), Quantity=1, ServiceID="SV01"}, 
-                new InvoiceService{InvoiceServiceID="I04", Status="Da dung", 
-                    TotalMoney=66000, CreateAt=DateTime.Now.AddDays(5), Quantity=5, ServiceID="SV06"}, 
-                new InvoiceService{InvoiceServiceID="I05", Status="Da dung", 
-                    TotalMoney=256000, CreateAt=DateTime.Now.AddDays(2), Quantity=2, ServiceID="SV04"}
+                new InvoiceService{InvoiceServiceID="I01", Status="Đã sử dụng", 
+                    TotalMoney=20000, CreateAt=DateTime.Now.AddDays(1), RoomID=101, ServiceID="SV02"}, 
+                new InvoiceService{InvoiceServiceID="I02", Status="Chưa sử dụng", 
+                    TotalMoney=44000, CreateAt=DateTime.Now.AddDays(3), RoomID=101, ServiceID="SV01"}, 
+                new InvoiceService{InvoiceServiceID="I04", Status="Đã sử dụng", 
+                    TotalMoney=66000, CreateAt=DateTime.Now.AddDays(5), RoomID=201, ServiceID="SV06"}, 
+                new InvoiceService{InvoiceServiceID="I05", Status="Đã sử dụng", 
+                    TotalMoney=256000, CreateAt=DateTime.Now.AddDays(2), RoomID=201, ServiceID="SV04"}, 
+                new InvoiceService{InvoiceServiceID="I06", Status="Chưa sử dụng", 
+                    TotalMoney=320000, CreateAt=DateTime.Now.AddDays(6), RoomID=101, ServiceID="SV03"},
             };
             ListInvoicesService.ItemsSource = _invoices;
         }

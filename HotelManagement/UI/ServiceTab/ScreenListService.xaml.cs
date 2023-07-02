@@ -28,11 +28,11 @@ namespace HotelManagement.UI.ServiceTab
         }
         public class ServiceInvoice : INotifyPropertyChanged
         {
-            public int InvoiceID { get; set; }
+            public string InvoiceID { get; set; }
             public int RoomID { get; set; }
-            public DateTime BookingDate { get; set; }
+            public string BookingDate { get; set; }
             public string Status { get; set; }
-            public string Notes { get; set; }
+            public string ServiceName { get; set; }
 
             public event PropertyChangedEventHandler? PropertyChanged;
         }
@@ -41,14 +41,12 @@ namespace HotelManagement.UI.ServiceTab
         {
             _serviceInvoices = new ObservableCollection<ServiceInvoice>()
             { 
-                new ServiceInvoice{InvoiceID =1, RoomID=1, BookingDate= DateTime.Now.AddDays(1), Status = "Chưa sử dụng", Notes = "Không có yêu cầu gì" },
-                new ServiceInvoice{InvoiceID =2, RoomID=1, BookingDate= DateTime.Now.AddDays(2), Status = "Đã sử dụng", Notes = "Không có yêu cầu gì" },
-                new ServiceInvoice{InvoiceID =3, RoomID=2, BookingDate= DateTime.Now.AddDays(1), Status = "Chưa sử dụng", Notes = "Không có yêu cầu gì" },
-                new ServiceInvoice{InvoiceID =4, RoomID=3, BookingDate= DateTime.Now.AddDays(1), Status = "Đã sử dụng", Notes = "Không có yêu cầu gì" },
-                new ServiceInvoice{InvoiceID =5, RoomID=4, BookingDate= DateTime.Now.AddDays(1), Status = "Đã sử dụng", Notes = "Không có yêu cầu gì" },
-                new ServiceInvoice{InvoiceID =6, RoomID=4, BookingDate= DateTime.Now.AddDays(2), Status = "Chưa sử dụng", Notes = "Không có yêu cầu gì" },
-                new ServiceInvoice{InvoiceID =7, RoomID=4, BookingDate= DateTime.Now.AddDays(3), Status = "Chưa sử dụng", Notes = "Không có yêu cầu gì" },
-            };
+                new ServiceInvoice{InvoiceID = "ID01", RoomID=101, BookingDate= "7/3/2023", Status = "Đã sử dụng", ServiceName = "Trái cây" },
+                //new ServiceInvoice{InvoiceID = "ID02", RoomID=101, BookingDate= "7/5/2023", Status = "Chưa sử dụng", ServiceName = "Nước ngọt" },
+                new ServiceInvoice{InvoiceID = "ID04", RoomID=201, BookingDate= "7/7/2023", Status = "Đã sử dụng", ServiceName = "Goft" },
+                new ServiceInvoice{InvoiceID = "ID05", RoomID=201, BookingDate= "7/4/2023", Status = "Đã sử dụng", ServiceName = "Bánh mì" },
+                new ServiceInvoice{InvoiceID = "ID06", RoomID=101, BookingDate= "7/8/2023", Status = "Chưa sử dụng", ServiceName = "Buffet" },
+             };
             serviceInvoicesListView.ItemsSource = _serviceInvoices;
         }
     }

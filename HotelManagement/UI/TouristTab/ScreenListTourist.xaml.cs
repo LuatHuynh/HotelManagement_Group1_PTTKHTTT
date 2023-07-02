@@ -32,7 +32,7 @@ namespace HotelManagement.UI.TouristTab
         {
             public int InvoiceID { get; set; }
             public int RoomID { get; set; }
-            public DateTime BookingDate { get; set; }
+            public string BookingDate { get; set; }
             public string CustomerName { get; set; }
             public string Notes { get; set; }
 
@@ -43,13 +43,11 @@ namespace HotelManagement.UI.TouristTab
         {
             _touristInvoices = new ObservableCollection<TouristInvoice>()
             {
-                new TouristInvoice{InvoiceID =1, RoomID=1, BookingDate= DateTime.Now.AddDays(1), CustomerName = "Nguyễn Văn An", Notes = "Không có yêu cầu gì" },
-                new TouristInvoice{InvoiceID =2, RoomID=1, BookingDate= DateTime.Now.AddDays(2), CustomerName = "Huỳnh Thị Anh", Notes = "Xe đón đến sớm" },
-                new TouristInvoice{InvoiceID =3, RoomID=2, BookingDate= DateTime.Now.AddDays(1), CustomerName = "La Ti Phong", Notes = "Xe có dù" },
-                new TouristInvoice{InvoiceID =4, RoomID=3, BookingDate= DateTime.Now.AddDays(1), CustomerName = "Trần Tuấn Kiệt", Notes = "Không có yêu cầu gì" },
-                new TouristInvoice{InvoiceID =5, RoomID=4, BookingDate= DateTime.Now.AddDays(1), CustomerName = "Võ Khánh Linh", Notes = "Anh tài xế đẹp trai" },
-                new TouristInvoice{InvoiceID =6, RoomID=4, BookingDate= DateTime.Now.AddDays(2), CustomerName = "Bùi Ngọc Thảo", Notes = "Không có yêu cầu gì" },
-                new TouristInvoice{InvoiceID =7, RoomID=4, BookingDate= DateTime.Now.AddDays(3), CustomerName = "Nguyễn Quốc Khoa", Notes = "Không có yêu cầu gì" },
+                new TouristInvoice{InvoiceID =1, RoomID=101, BookingDate= "7/3/2023", CustomerName = "Nguyễn Văn An", Notes = "Không có yêu cầu gì" },
+                new TouristInvoice{InvoiceID =2, RoomID=102, BookingDate= "7/3/2023", CustomerName = "Huỳnh Thị Anh", Notes = "Xe đón đến sớm" },
+                new TouristInvoice{InvoiceID =3, RoomID=201, BookingDate= "7/3/2023", CustomerName = "La Ti Phong", Notes = "Xe có dù" },
+                new TouristInvoice{InvoiceID =4, RoomID=301, BookingDate= "7/3/2023", CustomerName = "Trần Tuấn Kiệt", Notes = "Không có yêu cầu gì" },
+                new TouristInvoice{InvoiceID =5, RoomID=402, BookingDate= "7/3/2023", CustomerName = "Võ Khánh Linh", Notes = "Không có yêu cầu gì" },
             };
             touristInvoicesListView.ItemsSource = _touristInvoices;
         }

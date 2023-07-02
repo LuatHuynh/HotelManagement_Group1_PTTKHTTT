@@ -7,26 +7,39 @@
              mc:Ignorable="d" 
              d:DesignHeight="530" d:DesignWidth="360" Loaded="UserControl_Loaded">
     <StackPanel>
-        <ListView ItemsSource="{Binding ListRoom}">
+        <ListView
+                    x:Name="RoomsListView" 
+                    ScrollViewer.CanContentScroll="False"
+                    Background="Transparent"
+                    BorderThickness="0.3 0 0 0"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto" Height="270">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Resources>
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Padding" Value="0 5"/>
+                </Style>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.Resources>
             <ListView.View>
-                <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Employee Information">
-                    <GridViewColumn DisplayMemberBinding="{Binding RoomID}" Header="First Name" Width="100"/>
-
-                    <!--<GridViewColumn DisplayMemberBinding="{Binding Path=LastName}" Width="100">
-                        <GridViewColumnHeader>Last Name
-                            <GridViewColumnHeader.ContextMenu>
-                                <ContextMenu MenuItem.Click="LastNameCM_Click" Name="LastNameCM">
-                                    <MenuItem Header="Ascending" />
-                                    <MenuItem Header="Descending" />
-                                </ContextMenu>
-                            </GridViewColumnHeader.ContextMenu>
-                        </GridViewColumnHeader>
+                <GridView>
+                    <GridViewColumn
+                                Header="Room ID" 
+                                Width="360"
+                                DisplayMemberBinding="{Binding RoomID}">
                     </GridViewColumn>
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=EmployeeNumber}" Header="Employee No." Width="100"/>-->
+                    
                 </GridView>
-
             </ListView.View>
-        </ListView>
+        </ListView> 
     </StackPanel>
 </UserControl>
