@@ -5,21 +5,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HotelManagement.UI.CheckoutTab"
              mc:Ignorable="d" 
+             Loaded="Window_Loaded"
              Background="White"
              Title="Detail Invoice" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="CHI TIẾT HÓA ĐƠN" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0,10,0,364" RenderTransformOrigin="0.5,0.5" Width="232" />
-        <Grid  Background="#b9ccb0" Margin="84,69,84,108" >
+        <TextBlock Text="INVOICE DETAIL" FontSize="24" FontWeight="Bold"  Margin="295,10,295,0" Height="434" VerticalAlignment="Top" />
+        <Grid  Background="#b9ccb0" Margin="84,64,84,0" Height="262" VerticalAlignment="Top" >
+            <TextBlock Text="Customer Name:" FontSize="14" FontWeight="Bold" Margin="10,18,507,209"/>
+            <TextBox x:Name="txtName" IsReadOnly="True" Margin="163,10,140,0" Height="38" VerticalAlignment="Top" />
 
+            <TextBlock Text="Service:" FontSize="14" FontWeight="Bold" Margin="10,150,522,77"/>
+            <TextBox x:Name="txtRoomID" IsReadOnly="True" Margin="163,74,140,0" Height="39" VerticalAlignment="Top" />
+
+            <TextBlock Text="Room ID:" FontSize="14" FontWeight="Bold" Margin="10,83,522,144"/>
+            <TextBox x:Name="txtService" IsReadOnly="True" Margin="163,143,140,0" Height="44" VerticalAlignment="Top" />
+
+            <TextBlock Text="Total:" FontSize="14" FontWeight="Bold" Margin="10,217,522,10"/>
+            <TextBox x:Name="txtTotal" IsReadOnly="True" Margin="163,210,140,0" Height="44" VerticalAlignment="Top" />
         </Grid>
 
-        <Grid Margin="143,361,143,10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Button Content="Tạo Phiếu Đánh Giá" Click="btnCreateRatingForm_Click" Width="209" Margin="318,0,0,0" Grid.RowSpan="2"   />
-            <Button Content="Hoàn Tất Check Out" Click="btnCheckOut_Click" Margin="0,0,318,0" Height="50" VerticalAlignment="Center"  />
+        <Grid Margin="84,331,84,10">
+
+            <Button Content="Create Feedback Form" Click="btnCreateFeedbackForm_Click" Margin="0,0,447,13" Height="67" VerticalAlignment="Bottom"   />
+            <Button Content="Complete Checkout" Click="btnCheckOut_Click" Margin="466,0,0,13" Height="67" VerticalAlignment="Bottom"  />
+            <Button Content="Extend" Click="btnExtend_Click" Margin="235,0,209,13" Height="67" VerticalAlignment="Bottom"  />
         </Grid>
     </Grid>
 </Window>

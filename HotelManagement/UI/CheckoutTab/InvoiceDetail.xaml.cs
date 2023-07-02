@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,13 +27,35 @@ namespace HotelManagement.UI.CheckoutTab
             InitializeComponent();
         }
 
-        private void btnCreateRatingForm_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // Gán dữ liệu vào các ô TextBox 
+            txtName.Text = "Nguyễn Văn A"; 
+            txtRoomID.Text = "1"; 
+            txtService.Text = "Buffe"; 
+            txtTotal.Text = "580.000";
+            
 
+        }
+
+        private void btnCreateFeedbackForm_Click(object sender, RoutedEventArgs e)
+        {
+            CreateFeedbackForm feedBack = new CreateFeedbackForm();
+            feedBack.Show();
         }
 
         private void btnCheckOut_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnExtend_Click(object sender, RoutedEventArgs e)
+        {
+
+            //Do something
+            Extend  extend = new Extend();
+            extend.Show();
+
 
         }
     }

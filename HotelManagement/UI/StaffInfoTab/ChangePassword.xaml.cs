@@ -12,24 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HotelManagement.UI.Login
+namespace HotelManagement.UI.StaffInfoTab
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for ChangePassword.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class ChangePassword : Window
     {
-        public LoginWindow()
+        public ChangePassword()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void btnChangePassword_Click(object sender, RoutedEventArgs e)
         {
-            var mainScreen = new MainWindow();
-            mainScreen.Show();
             this.Close();
         }
-    
     }
 }
