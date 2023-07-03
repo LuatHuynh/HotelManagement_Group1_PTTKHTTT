@@ -94,6 +94,9 @@
                         <Button>
                             <Image Width="20" Source="/Imgs/search.png"></Image>
                         </Button>
+                        <Button Margin="10 0 0 0">
+                            All reservation cards
+                        </Button>
                     </StackPanel>
 
                     <ListView
