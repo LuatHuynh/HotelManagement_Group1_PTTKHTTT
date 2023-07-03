@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HotelManagement.UI.TouristTab"
         mc:Ignorable="d"
         Background="White"
-        Title="DeltailTouristWindow" Height="530" Width="1200">
+        Title="DeltailTouristWindow" Height="530" Width="1200" Loaded="Window_Loaded">
     <StackPanel >
         <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" >
             <StackPanel Orientation="Horizontal" />
@@ -24,37 +24,46 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
-                <Label Content="Tên người đại diện:" Margin="100,0,0,0"></Label>
-                <TextBox Height="30" Margin="234,0,666,45" Width="300"></TextBox>
-                <Label Content="Nhập CCCD người  đại diện:" Margin="100,40,0,0"></Label>
-                <TextBox Height="30" Margin="273,42,627,3" Width="300"></TextBox>
+            <Grid Grid.Row="0" >
+                <Label Content="Tên người đại diện:" Margin="100,0,0,0" 
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBlock  Margin="258,7,642,0" Width="300" VerticalAlignment="Top"
+                           Text="Nguyễn Văn An"></TextBlock>
+                <Label Content="CCCD người  đại diện:" Margin="100,40,0,0"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBlock  Margin="258,47,642,0" Width="300" Text="040212583821" VerticalAlignment="Top"></TextBlock>
 
             </Grid>
             <Grid Grid.Row="1">
-                <Label Content="Gói du lịch:" Margin="100,5,0,5"></Label>
-                <TextBlock Text="Goi abc" Width="222" Margin="185,10,793,42" Height="23"/>
-                <Label Content="Thời gian đi:" Height="50" Margin="100,45,0,-20"></Label>
-                <TextBlock Height="30" Width="300" Margin="185,45,715,0"></TextBlock>
+                <Label Content="Gói du lịch:" Margin="100,5,0,5"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBlock Text="Du lịch động Phong nha" Width="222" Margin="260,10,718,42" Height="23"/>
+                <Label Content="Thời gian đi:" Height="50" Margin="100,45,0,-20"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBlock Height="30" Width="300" Margin="260,52,640,-7" Text="02/07/2023"></TextBlock>
             </Grid>
             <Grid Grid.Row="2">
-                <Label Content="Số người tham gia:" Margin="100,12,0,-12"></Label>
-                <TextBox Height="30" Margin="236,10,664,35" Width="300"></TextBox>
-                <Label Content="Yêu cầu thêm:" Margin="100,50,0,-25" Height="50"></Label>
-                <TextBox Height="30" Margin="236,60,364,-15" Width="600"></TextBox>
+                <Label Content="Số người tham gia:" Margin="100,5,0,-5"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBlock Text="3" Margin="262,10,638,35" Width="300"></TextBlock>
+                <Label Content="Yêu cầu thêm:" Margin="100,45,0,-20" Height="50"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBlock  Margin="262,52,610,0" Text="Không có" VerticalAlignment="Top"/>
             </Grid>
             <Grid Grid.Row="3">
-                <Label Content="Loại hình đưa đón:" Margin="100,20,0,-20"></Label>
-                <TextBlock Text="Xe du lịch" Width="400" Height="50" Margin="232,25,568,0"></TextBlock>
+                <Label Content="Loại hình đưa đón:" Margin="100,20,0,-20"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <TextBlock Text="Xe du lịch" Width="400" Height="50" Margin="260,27,540,-2"></TextBlock>
             </Grid>
-            <StackPanel Grid.Row="4">
-
-
-            </StackPanel>
+            <Grid Grid.Row="4">
+                <Label Content="Trạng thái:" Margin="100,-1,0,-16"
+                       FontSize="14" FontWeight="DemiBold"></Label>
+                <ComboBox  Height="25" Margin="256,3,819,47" x:Name="comboBox"/>
+            </Grid>
             <StackPanel HorizontalAlignment="Right" Grid.Row="5">
                 <!-- Các phần tử khác trong StackPanel -->
 
-                <Button Content="Đồng ý" Margin="0,10,300,10" HorizontalAlignment="Right" Height="40" Width="80"/>
+                <Button Content="Lưu" Margin="0,0,300,10" HorizontalAlignment="Right" Height="40" Width="80"/>
             </StackPanel>
         </Grid>
 

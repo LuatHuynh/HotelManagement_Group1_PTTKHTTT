@@ -10,7 +10,7 @@
     <Grid>
         <Grid Margin="10,0,0,0" RenderTransformOrigin="0.689,0.608">
 
-            <TextBlock Text="LOGIN" FontSize="28" HorizontalAlignment="Center" FontWeight="Bold" />
+            <TextBlock Text="LOGIN" FontSize="28" HorizontalAlignment="Center" FontWeight="Bold" Margin="0,10,0,-10" />
 
             <Grid Margin="312,132,312,95" Background="#b9ccb0" >
                 <Grid.RowDefinitions>
@@ -18,7 +18,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Button Content="Login" Click="btnLogin_Click" Margin="170,271,170,332" 
+                <Button Content="Login" Click="btnLogin_Click" Margin="170,312,170,243" 
                         FontSize ="24" Background="#35e5a5" Foreground="White" FontWeight="Bold" >
                     <Button.Resources>
                         <Style TargetType="Border">
@@ -27,21 +27,15 @@
                     </Button.Resources>
                 </Button>
 
-                <Button Click="btnBack_Click" Margin="250,345,250,291" 
-                        BorderBrush="Transparent" Background="Transparent" 
-                        RenderTransformOrigin="0.509,0.981"  >
-                    <TextBlock Text="Back" TextDecorations="Underline" Foreground="Black" 
-                               FontSize="20" FontWeight="Bold"  HorizontalAlignment="Left" 
-                               VerticalAlignment="Top"/>
-                </Button>
+           
 
                 <StackPanel Grid.Row="0" Margin="20,10,20,482">
                     <TextBlock Text="User Name " FontSize="18" 
                                FontWeight="Bold" Height="41" Width="94" 
                                RenderTransformOrigin="0.889,0.484" 
                                FontFamily="Times New Roman"/>
-                    <TextBox x:Name="txtUsername" Width="510" Height="60" FontSize="18" Padding = "20, 15 ,0, 0 "  
-                         Text="Account" Foreground="Gray" GotFocus="txtUsername_GotFocus" LostFocus="txtUsername_LostFocus">
+                    <TextBox x:Name="txtUsername" Width="510" Height="60" FontSize="20" FontWeight="Bold" Padding = "20, 15 ,0, 0 "  
+                          Foreground="Gray">
                         <TextBox.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="20" />
@@ -52,10 +46,12 @@
 
                 </StackPanel>
 
-                <StackPanel Margin="20,138,20,386">
+                <StackPanel Margin="20,148,20,376">
                     <TextBlock Text="Password" FontSize="18" FontWeight="Bold" Height="41" Width="86"/>
                     <Border Background="white" BorderBrush="White" BorderThickness="0" CornerRadius="20" Width="510" Height="60 ">
-                        <PasswordBox Name="password" Height="60" VerticalAlignment="Center" Background="LightBlue" Foreground="DarkBlue" Margin="17,0,18,0" />
+                        <PasswordBox Name="password" Height="60" FontSize ="20" VerticalAlignment="Center" Background="White" 
+                                     Foreground="Gray" BorderBrush ="White"  Margin="17,0,18,0" 
+                                     FontWeight="Bold"  Padding = "0, 15 ,0, 0" SelectionBrush="Black" />
                     </Border>
                 </StackPanel>
 

@@ -10,19 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelManagement.UI.TouristTab
+namespace HotelManagement.UI.StaffInfoTab
 {
     /// <summary>
-    /// Interaction logic for ScreenDetailTourist.xaml
+    /// Interaction logic for ChangePassword.xaml
     /// </summary>
-    public partial class ScreenDetailTourist : UserControl
+    public partial class ChangePassword : Window
     {
-        public ScreenDetailTourist()
+        public ChangePassword()
         {
             InitializeComponent();
+        }
+
+        private void btnChangePassword_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

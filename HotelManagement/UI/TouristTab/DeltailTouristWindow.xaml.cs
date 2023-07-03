@@ -23,5 +23,17 @@ namespace HotelManagement.UI.TouristTab
         {
             InitializeComponent();
         }
-    }
+        public List<string> SampleData { get; set; }
+        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            SampleData = new List<string>
+            {
+            "Xác nhận",
+            "Chưa xác nhận",
+            };
+            comboBox.ItemsSource = SampleData;
+        }
+    };
+
 }

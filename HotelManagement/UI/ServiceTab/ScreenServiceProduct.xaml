@@ -15,10 +15,8 @@
             <ColumnDefinition Width="480"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <GroupBox Header="Danh sach phong">
-                <ListView>
-
-                </ListView>
+            <GroupBox Header="Danh sách phòng" FontSize="15" FontWeight="SemiBold">
+                <views:ListRoom></views:ListRoom>
             </GroupBox>
         </StackPanel>
         <Grid Grid.Column="1">
@@ -27,24 +25,17 @@
                 <RowDefinition Height="133*"></RowDefinition>
                 <RowDefinition Height="132*"/>
             </Grid.RowDefinitions>
-            <GroupBox Header="Danh sach dich vu" Grid.Row="0">
+            <GroupBox Header="Danh sách dịch vụ, sản phẩm" FontSize="15" FontWeight="SemiBold" Grid.Row="0">
                 <!--<StackPanel>
                 </StackPanel>-->
                 <views:ListService></views:ListService>
             </GroupBox>
-            <GroupBox Header="Chuc nang" Grid.Row="1" Grid.RowSpan="2">
+            <GroupBox Header="Chức năng" FontSize="15" FontWeight="SemiBold" Grid.Row="1" Grid.RowSpan="2">
                 <views:Function></views:Function>
             </GroupBox>
         </Grid>
         <Grid Grid.Column="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="2*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <GroupBox Header="Danh sach quy dinh" Grid.Row="0">
-                <views:ListRegulation></views:ListRegulation>
-            </GroupBox>
-            <GroupBox Header="Hoa don dich vu" Grid.Row="1">
+            <GroupBox Header="Hoá đơn dịch vụ" FontSize="15" FontWeight="SemiBold" >
                 <views:ListInvoiceService></views:ListInvoiceService>
             </GroupBox>
         </Grid>

@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              Background="White"
              Title="Create feedback form"
-             Height="675" Width="1200">
+             Height="600" Width="1200">
     <Window.Resources>
         <Style x:Key="StarButtonStyle" TargetType="Button">
             <Setter Property="Content" Value="☆" />
@@ -26,49 +26,34 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TextBlock Text="TẠO PHIẾU ĐÁNH GIÁ" FontWeight="Bold"  HorizontalAlignment="Center" FontSize="20" Margin="0,7,0,608" Width="220"/>
+        <TextBlock Text="FEEDBACK FORM " FontWeight="Bold"  HorizontalAlignment="Center" FontSize="20" Margin="0,7,0,0" Width="172" Height="41" VerticalAlignment="Top"/>
 
-        <Grid Background="#b9ccb0" Margin="40,51,627,311" RenderTransformOrigin="0.5,0.5" >
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-            <TextBlock Text="Thông Tin Khách Hàng" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="164,10,113,233"/>
-            <TextBlock Text="Họ tên: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,66,447,150"/>
-            <TextBox x:Name="txtName" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="138,46,23,190" RenderTransformOrigin="0.5,0.5"/>
+        <Grid Background="#b9ccb0" Margin="40,51,0,0" RenderTransformOrigin="0.5,0.5" Height="281" VerticalAlignment="Top" HorizontalAlignment="Left" Width="533" >
+            <TextBlock Text="Custom Information" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="164,10,113,0" Height="38" VerticalAlignment="Top"/>
+            <TextBlock Text="Full Name: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,66,427,0" Height="82" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtName" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="221,46,23,0" RenderTransformOrigin="0.5,0.5" Height="47" VerticalAlignment="Top"/>
 
-            <TextBlock Text="CMND:" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,152,447,67"/>
-            <TextBox x:Name="txtCMND" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="138,127,23,106" RenderTransformOrigin="0.5,0.5"/>
+            <TextBlock Text="Personal Indentification:" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,133,331,0" Height="40" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtCMND" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="221,126,23,0" RenderTransformOrigin="0.5,0.5" Height="47" VerticalAlignment="Top"/>
 
-            <TextBlock Text="Số điện thoại: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,238,416,10"/>
-            <TextBox x:Name="txtSDT" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="138,216,23,10" RenderTransformOrigin="0.5,0.5"/>
+            <TextBlock Text="Phone Number: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,223,400,0" Height="41" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtSDT" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="221,215,23,0" RenderTransformOrigin="0.5,0.5" Height="49" VerticalAlignment="Top"/>
         </Grid>
 
-        <Grid Background="#b9ccb0" Margin="622,51,45,311" RenderTransformOrigin="0.5,0.5" >
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-            <TextBlock Text="Thông Tin Phòng" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="186,10,135,230"/>
-            <TextBlock Text="Mã phòng: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="27,84,418,134"/>
-            <TextBox x:Name="txtMaPhong" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="160,67,32,164"/>
+        <Grid Background="#b9ccb0" Margin="622,51,0,0" RenderTransformOrigin="0.5,0.5" Height="281" VerticalAlignment="Top" HorizontalAlignment="Left" Width="533" >
 
-            <TextBlock Text="Loại Phòng:" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="27,190,398,40"/>
-            <TextBox x:Name="txtLoaiPhong" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="160,171,32,56"/>
+            <TextBlock Text="Room Information" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="0,0,135,213" Height="58" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="212"/>
+            <TextBlock Text="Room ID: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="27,0,0,134" Height="63" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="88"/>
+            <TextBox x:Name="txtMaPhong" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="200,0,0,165" Height="49" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="301"/>
+
+            <TextBlock Text="RoomTypeName:" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="27,0,0,100" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="134"/>
+            <TextBox x:Name="txtLoaiPhong" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="0,0,32,87" Height="52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="301"/>
 
 
         </Grid>
 
-        <TextBlock Text="Thế hiển mức độ hài lòng:" FontWeight="Bold" HorizontalAlignment="Left" FontSize="18" Margin="172,382,0,206" Width="220" />
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="150,418,0,155" Width="264">
+        <TextBlock Text="Rating for us:" FontWeight="Bold" HorizontalAlignment="Left" FontSize="18" Margin="99,430,0,0" Width="135" Height="23" VerticalAlignment="Top" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="239,406,0,0" Width="264" Height="63" VerticalAlignment="Top">
             <Button x:Name="btnStar1" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50"  BorderBrush="White"/>
             <Button x:Name="btnStar2" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50" BorderBrush="White"/>
             <Button x:Name="btnStar3" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50" BorderBrush="White"/>
@@ -76,10 +61,10 @@
             <Button x:Name="btnStar5" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50" BorderBrush="White" />
         </StackPanel>
 
-        <TextBlock Text="Bình Luận: " FontSize="18" FontWeight="Bold" FontFamily="Times New Roman" Margin="622,366,451,223"/>
-        <TextBox x:Name="txtCmt" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="622,402,45,130" BorderBrush="Blue" />
+        <TextBlock Text="Comment: " FontSize="18" FontWeight="Bold" FontFamily="Times New Roman" Margin="622,366,451,0" Height="32" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCmt" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="622,402,45,0" BorderBrush="Blue" Height="104" VerticalAlignment="Top" />
 
-        <Button Content="Lưu Phiếu" Click="btnLuuPhieu_Click"  FontSize ="24" Background="#35e5a5" Foreground="White" FontWeight="Bold" Margin="521,562,521,10" >
+        <Button Content="Save" Click="btnLuuPhieu_Click"  FontSize ="24" Background="#35e5a5" Foreground="White" FontWeight="Bold" Margin="524,511,524,0" Height="51" VerticalAlignment="Top" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="20" ></Setter>

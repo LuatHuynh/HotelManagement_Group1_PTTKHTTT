@@ -12,24 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace HotelManagement.UI.Login
+namespace HotelManagement.UI.CheckoutTab
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for Extend.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class Extend : Window
     {
-        public LoginWindow()
+        public Extend()
         {
             InitializeComponent();
         }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
-            var mainScreen = new MainWindow();
-            mainScreen.Show();
             this.Close();
         }
-    
     }
 }

@@ -31,32 +31,41 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </UserControl.Resources> 
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1.25*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <Label FontSize="15" FontWeight="Bold">Tong tien</Label>
-            <TextBox Width="250" Height="25"></TextBox>
+            <Label FontSize="15" FontWeight="Bold">Tổng tiền:</Label>
+            <TextBlock Width="250" Height="25" FontWeight="DemiBold" 
+                       FontSize="16" VerticalAlignment="Center" Margin="0,4,0,0" 
+                       x:Name="totalCost" Text="400000"
+                       ></TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="1">
-            <Label FontSize="15" FontWeight="Bold">Giam gia:</Label>
-            <TextBox Width="250" Height="25">20000</TextBox>
+            <Label FontSize="15" FontWeight="Bold">Giảm giá phần trăm tổng tiền:</Label>
+            <TextBox Width="250" Height="30" VerticalContentAlignment="Center"
+                     FontSize="15" FontWeight="DemiBold" Margin="0,4,0,0"></TextBox>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" VerticalAlignment="Center" >
-            <Button Content="Xac nhan" Style="{StaticResource CustomButtonStyle}"></Button>
+        <StackPanel Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" >
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.641"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.43"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Button Content="Thêm dịch vụ/sản phẩm" Style="{StaticResource CustomButtonStyle}" Click="AddService_Click"></Button>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" VerticalAlignment="Center">
-            <Button Content="Dong" Style="{StaticResource CustomButtonStyle}"></Button>
-        </StackPanel>
+
 
     </Grid>
 </UserControl>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="HotelManagement.UI.CheckoutTab.Extend"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelManagement.UI.CheckoutTab"
+        mc:Ignorable="d"
+        Title="Extend" Height="450" Width="800">
+    <Grid>
+        <Grid Background="#b9ccb0" Margin="46,10,0,0" Height="312" VerticalAlignment="Top" HorizontalAlignment="Left" Width="708" >
+
+            <TextBlock Text="Extended Stay" FontSize="26" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="300,7,0,235" HorizontalAlignment="Left" Width="176"/>
+            <TextBlock Text="Room ID: " FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="107,92,511,0" Height="57" VerticalAlignment="Top"/>
+            <ComboBox x:Name="txtRoomID" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="226,77,156,185" RenderTransformOrigin="0.5,0.5">
+                <ComboBoxItem Content="1" FontSize="14" FontWeight="Bold"/>
+                <ComboBoxItem Content="2" FontSize="14" FontWeight="Bold"/>
+                <ComboBoxItem Content="3" FontSize="14" FontWeight="Bold"/>
+                <ComboBoxItem Content="4" FontSize="14" FontWeight="Bold"/>
+                <ComboBoxItem Content="5" FontSize="14" FontWeight="Bold"/>
+                <ComboBoxItem Content="6" FontSize="14" FontWeight="Bold"/>
+                <ComboBoxItem Content="7" FontSize="14" FontWeight="Bold"/>
+                <ComboBoxItem Content="8" FontSize="14" FontWeight="Bold"/>
+            </ComboBox>
+
+            <TextBlock Text="Date:" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="107,198,531,0" Height="34" VerticalAlignment="Top"/>
+            <DatePicker x:Name="SearchFromForRoomTextBox" FontSize="22"  Margin="232,198,156,80" SelectedDateFormat="Short"/>
+
+        </Grid>
+        <Button Content="Confirm" Click="btnConfirm_Click"  FontSize ="24" Background="#35e5a5" Foreground="White" FontWeight="Bold" Margin="314,346,314,0" RenderTransformOrigin="0.5,0.5" Height="62" VerticalAlignment="Top" >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20" ></Setter>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+    </Grid>
+</Window>
