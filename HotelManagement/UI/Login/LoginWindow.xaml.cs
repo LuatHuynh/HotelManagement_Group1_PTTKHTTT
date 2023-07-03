@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Text.RegularExpressions;
 
 namespace HotelManagement.UI.Login
 {
@@ -24,7 +26,7 @@ namespace HotelManagement.UI.Login
     {
         public LoginWindow()
         {
-            Username = "staff";
+            //Username = "staff";
 
             InitializeComponent();
         }
@@ -37,25 +39,42 @@ namespace HotelManagement.UI.Login
         public string pass { get; set; }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if(Username =="staff")
-            {
-                var mainScreen = new MainWindow();
-                mainScreen.Show();
+            string Username = txtUsername.Text;
 
-                this.Close();
-            }
-            else if (Username == "admin")
+            // Kiểm tra xem chuỗi nhập vào có khớp với mẫu "staff/admin" + "ID" hay không
+            Regex regex = new Regex(@"^(staff|admin)(\d+)$");
+            Match match = regex.Match(Username);
+
+            if (match.Success)
             {
-                NavigationStore _navigationStore = new NavigationStore();
-                _navigationStore.CurrentViewModel = new AdminMainViewModel();
-                var screen = new adminWindow()
+                string userType = match.Groups[1].Value; // "staff" hoặc "admin"
+                int userID = Int32.Parse(match.Groups[2].Value); // ID (số nguyên)
+
+                if (userType == "staff")
                 {
-                    DataContext = new MainViewModel(_navigationStore)
-                };
-                screen.Show();
-                this.Close();
+                    var mainScreen = new MainWindow();
+                    mainScreen.Show();
+
+                    this.Close();
+                }
+                else if (userType == "admin")
+                {
+                    NavigationStore _navigationStore = new NavigationStore();
+                    _navigationStore.CurrentViewModel = new AdminMainViewModel();
+                    var screen = new adminWindow()
+                    {
+                        DataContext = new MainViewModel(_navigationStore)
+                    };
+                    screen.Show();
+                    this.Close();
+                }            
             }
-     
+            else
+            {
+                warning.Foreground = Brushes.Red;
+                MessageBox.Show("Invalid Username");              
+            }
+
 
         }
     
