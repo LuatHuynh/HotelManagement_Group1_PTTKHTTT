@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              Loaded="Window_Loaded"
              Background="White"
-             d:Height="600" d:Width="1200">
+             d:DesignHeight="530" d:DesignWidth="1200">
     <Grid>
         <Grid.Resources>
             <Style TargetType="TextBox">
@@ -18,12 +18,12 @@
             </Style>
         </Grid.Resources>
 
-        <TextBlock Text="ACCOUNT INFORMATION" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"  Width="314" />
+        <TextBlock Text="ACCOUNT INFORMATION" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"  Width="314" Margin="0,0,0,129" />
 
 
 
         <Grid Margin="10,37,10,126">
-            <StackPanel Margin="70,32,628,286">
+            <StackPanel Margin="70,32,628,238">
                 <TextBlock Text="Staff ID:" FontSize ="14" FontWeight="Bold" Height="32" Width="430"/>
                 <TextBox x:Name="txtStaffID" IsReadOnly="True"  Height="55" Width="440" >
                     <TextBox.Resources>
@@ -50,7 +50,7 @@
 
             </StackPanel>
 
-            <StackPanel Margin="628,151,70,161">
+            <StackPanel Margin="630,129,68,135">
                 <TextBlock Text="Telephone number:"  FontSize="14" FontWeight="Bold" Height="32" Width="434"/>
                 <TextBox x:Name="phoneNumber" IsReadOnly="True"  Height="55" Width="440">
                     <TextBox.Resources>
@@ -61,7 +61,7 @@
                 </TextBox>
             </StackPanel>
 
-            <StackPanel Margin="70,151,628,161">
+            <StackPanel Margin="70,128,628,143">
                 <TextBlock Text="Address:" FontSize="14"  FontWeight="Bold" Height="32"  Width="428"/>
                 <TextBox x:Name="address" IsReadOnly="True" Height="55" Width="440">
                     <TextBox.Resources>
@@ -73,7 +73,7 @@
 
             </StackPanel>
 
-            <StackPanel Margin="70,281,628,52">
+            <StackPanel Margin="74,223,624,43">
                 <TextBlock Text="Position:" FontSize="14"  FontWeight="Bold" Height="30"  Width="426"/>
                 <ComboBox x:Name="position" IsReadOnly="True"  Height="55" Width="440">
                     <ComboBox.Resources>
@@ -92,12 +92,12 @@
 
         <Button Content="Edit Information" FontSize="20" Name="UpdateInfoButton"
                 Click="UpdateInfoButton_Click" Background="SkyBlue" 
-                Foreground="White" Margin="345,497,659,27" 
+                Foreground="White" Margin="344,395,660,81" 
                 FontWeight="Bold"/>
 
         <Button Content="Change Password" 
                 Click="ChangePassword_Click" FontSize="20" Background="SkyBlue" 
-                Foreground="White"  Margin="665,497,338,27" 
+                Foreground="White"  Margin="671,397,332,81" 
                  FontWeight="Bold" />
     </Grid>
 </UserControl>

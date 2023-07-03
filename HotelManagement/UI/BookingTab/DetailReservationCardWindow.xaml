@@ -22,13 +22,16 @@
                 <StackPanel Margin="10" Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
                         <Label FontSize="14">Reservation card ID</Label>
-                        <TextBox Margin="20 5 20 5" Width="50" Name="ReservationCardIdTextBox" IsReadOnly="True" 
+                        <TextBox Margin="2 5 20 5" Width="50" Name="ReservationCardIdTextBox" IsReadOnly="True" 
+                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="1"/>
+                        <Label FontSize="14">Room ID</Label>
+                        <TextBox Margin="2 5 20 5" Width="50" Name="RoomIdTextBox" IsReadOnly="True" 
                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="1"/>
                         <Label FontSize="14">Status</Label>
-                        <TextBox Margin="20 5 20 5" Width="50" Name="StatusTextBox" IsReadOnly="True" 
+                        <TextBox Margin="2 5 20 5" Width="50" Name="StatusTextBox" IsReadOnly="True" 
                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="check-in"/>
                         <Label FontSize="14">Time of stay</Label>
-                        <TextBox Margin="20 5 20 5" Width="200" Name="FromTextBox" IsReadOnly="True" 
+                        <TextBox Margin="2 5 20 5" Width="200" Name="FromTextBox" IsReadOnly="True" 
                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="24/06/2023 - 26/06/2023"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
