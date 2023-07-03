@@ -20,10 +20,12 @@
     <None Remove="resources\Icons\cross.png" />
     <None Remove="resources\Icons\delete.png" />
     <None Remove="resources\Icons\detail.png" />
+    <None Remove="resources\Icons\edit.png" />
     <None Remove="resources\Icons\listservice.png" />
     <None Remove="resources\Icons\listtourist.png" />
     <None Remove="resources\Icons\reception.png" />
     <None Remove="resources\Icons\search.png" />
+    <None Remove="resources\Icons\trash.png" />
     <None Remove="resources\Icons\update.png" />
     <None Remove="resources\Icons\selective.png" />
   </ItemGroup>
@@ -34,6 +36,7 @@
     </Resource>
     <Resource Include="resources\Icons\delete.png" />
     <Resource Include="resources\Icons\detail.png" />
+    <Resource Include="resources\Icons\edit.png" />
     <Resource Include="resources\Icons\listservice.png" />
     <Resource Include="resources\Icons\listtourist.png" />
     <Resource Include="resources\Icons\reception.png" />
@@ -74,6 +77,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="resources\Icons\search.png" />
+    <Resource Include="resources\Icons\trash.png" />
     <Resource Include="resources\Icons\update.png" />
     <Resource Include="resources\Icons\selective.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
