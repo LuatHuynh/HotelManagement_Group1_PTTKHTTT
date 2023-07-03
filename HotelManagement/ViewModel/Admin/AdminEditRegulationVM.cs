@@ -1,4 +1,6 @@
 ﻿using HotelManagement.Command;
+using HotelManagement.Entities;
+using HotelManagement.Model;
 using HotelManagement.Services;
 using HotelManagement.Stores;
 using System;
@@ -10,8 +12,9 @@ using System.Windows.Input;
 
 namespace HotelManagement.ViewModel.Admin
 {
-    public class AdminAddRegulationModel: ViewModelBase
+    public class AdminEditRegulationVM:ViewModelBase
     {
+
         public string _userIDNo;
         public string _name;
         public string _userName;
@@ -61,11 +64,11 @@ namespace HotelManagement.ViewModel.Admin
             }
         }
         public ICommand viewRegulationList { get; set; }
-   
-        public AdminAddRegulationModel(NavigationStore navigationStore)
+
+        public AdminEditRegulationVM(NavigationStore navigationStore)
         {
-         
-            viewRegulationList = new NavigateCommand(new NavigateService(navigationStore, () => new AdminViewRegulationModel(navigationStore)));
+
+         viewRegulationList = new NavigateCommand(new NavigateService(navigationStore, () => new AdminViewRegulationModel(navigationStore)));
         }
     }
 }

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HotelManagement.UI.Admin"
              mc:Ignorable="d" 
-             d:DesignHeight="630" d:DesignWidth="1200">
+            Height="630"  Width="1200">
     <UserControl.Resources>
         <ControlTemplate x:Key="labelTemplate" TargetType="TextBox">
             <Border
@@ -155,46 +155,14 @@
                             Command="{Binding addNewUser}"></Button>
                 </Grid>
             </StackPanel>
-            <ListView Background="#2E8A99"  Width="800" Height="450" VerticalAlignment="Top">
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
+            <ListView Background="#2E8A99"  Width="800" Height="450" VerticalAlignment="Top" 
+                      ItemsSource="{Binding Regulation}">
+
+
                 <ListView.ItemContainerStyle>
-                    
+
                     <Style TargetType="ListViewItem">
-                        <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"></EventSetter>
+                        <!--<EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"></EventSetter>-->
                         <Setter Property="HorizontalContentAlignment"  Value="Stretch"></Setter>
                     </Style>
 
@@ -206,51 +174,81 @@
 
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="1" FontSize="12" HorizontalAlignment="Center" Margin="1">
+                                    <TextBlock Text="{Binding Id}" FontSize="12" HorizontalAlignment="Center" Margin="1">
 
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Name"  Width="110">
+                        <GridViewColumn Header="Name"  Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="Khoa" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Name}" HorizontalAlignment="Center">
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Phone No." Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Phone}" HorizontalAlignment="Center">
 
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Phone" Width="110">
+                        <GridViewColumn Header="Role" Width="110">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="1234" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Role}" HorizontalAlignment="Center">
 
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Address" Width="400">
+                        <GridViewColumn Header="Account" Width="110">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="26 tran phu" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Account}" HorizontalAlignment="Center">
 
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Account" Width="100">
+
+                        <GridViewColumn Header="Password" Width="110">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="Account " HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Password}" HorizontalAlignment="Center">
 
                                     </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Action" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Command="{Binding Path=DataContext.editCommand, RelativeSource={RelativeSource AncestorType=ListView}}" 
+                                                CommandParameter="{Binding id}">
+                                            <Image Source="../../resources/icons/edit.png"  Width="20px">
+
+                                            </Image>
+                                        </Button>
+
+                                        <Button Command="{Binding Path=DataContext.delete, RelativeSource={RelativeSource AncestorType=ListView}}" 
+                                                CommandParameter="{Binding}" >
+                                            <Image Source="../../resources/icons/trash.png"  Width="20px"></Image>
+                                        </Button>
+
+                                    </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>
+
         </StackPanel>
     </Grid>
 </UserControl>

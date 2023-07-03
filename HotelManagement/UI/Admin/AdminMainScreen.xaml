@@ -91,6 +91,30 @@
             <DataTemplate DataType="{x:Type vms:AdminAddRegulationModel}">
                 <views:AdminAddRegulationScreen></views:AdminAddRegulationScreen>
             </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:AdminViewServiceViewModel}">
+                <views:AdminViewServiceScreen></views:AdminViewServiceScreen>
+            </DataTemplate>
+            <DataTemplate
+                 DataType="{x:Type vms:AdminEditRegulationVM}">
+                <views:EditRegulationScreen></views:EditRegulationScreen>
+            </DataTemplate>
+            <DataTemplate
+                 DataType="{x:Type vms:AdminEditUserVM}">
+                <views:EditUserScreen></views:EditUserScreen>
+            </DataTemplate>
+            <DataTemplate
+                 DataType="{x:Type vms:AdminEditRoomVM}">
+                <views:EditRoomScreen></views:EditRoomScreen>
+            </DataTemplate>
+            <DataTemplate
+                 DataType="{x:Type vms:AdminAddServiceVM}">
+                <views:AdminAddServiceScreen></views:AdminAddServiceScreen>
+            </DataTemplate>
+
+            <DataTemplate
+                 DataType="{x:Type vms:AdminEditServiceVM}">
+                <views:AdminEditServiceScreen></views:AdminEditServiceScreen>
+            </DataTemplate>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="45">

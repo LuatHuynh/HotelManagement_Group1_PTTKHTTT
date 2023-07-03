@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="HotelManagement.UI.Admin.AdminAddRoomScreen"
+﻿<UserControl x:Class="HotelManagement.UI.Admin.EditRoomScreen"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -85,7 +85,7 @@
             <ColumnDefinition></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Add New Room"
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Edit Room"
                    Style="{StaticResource label}"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
@@ -98,7 +98,7 @@
                 Style="{StaticResource buttonStyle}" 
                 Width="100" 
                 HorizontalAlignment="Right"></Button>
-        <StackPanel Grid.Row="2"
+        <StackPanel Grid.Row="1"
                     Grid.ColumnSpan="2"
                     Orientation="Vertical"
                     VerticalAlignment="Center"
@@ -113,7 +113,7 @@
             <TextBox
                 Template="{StaticResource labelTemplate}"></TextBox>
         </StackPanel>
-        <StackPanel Grid.Row="3"
+        <StackPanel Grid.Row="2"
                     Grid.ColumnSpan="2"
                     Orientation="Vertical"
                     VerticalAlignment="Center"
@@ -122,7 +122,7 @@
             <Border
                 Style="{StaticResource border}">
                 <TextBlock
-                Text="Room Type"
+                Text="Room Status"
                 Style="{StaticResource label}"></TextBlock>
             </Border>
             <ComboBox x:Name="cmbCountryList"   
@@ -139,7 +139,33 @@
                                     IsEditable="True"   
                                     Margin="0"/>
         </StackPanel>
-        
+        <StackPanel Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+            <Border
+                Style="{StaticResource border}">
+                <TextBlock
+                Text="Room Type"
+                Style="{StaticResource label}"></TextBlock>
+            </Border>
+            <ComboBox x:Name="cmbStatusList"   
+                                    Width="250"   
+                                    Height="50"  
+                                    FontSize="18"    
+                                    HorizontalAlignment="Center"   
+                                    VerticalAlignment="Top"  
+                                    BorderThickness="0"  
+                                    VerticalContentAlignment="Center"  
+                                    Padding="15,0,0,0"   
+                                    Background="Transparent"  
+                                    Foreground="Black"  
+                                    IsEditable="True"   
+                                    Margin="0"/>
+        </StackPanel>
+
 
         <StackPanel Grid.Row="4" Grid.ColumnSpan="2"
                     HorizontalAlignment="Center"

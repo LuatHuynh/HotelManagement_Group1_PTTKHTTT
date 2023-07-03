@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HotelManagement.Stores;
+using HotelManagement.ViewModel.Admin;
+using HotelManagement.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,14 +24,39 @@ namespace HotelManagement.UI.Login
     {
         public LoginWindow()
         {
+            Username = "staff";
+
             InitializeComponent();
         }
 
+        public string Username
+        {
+            get;set;
+        }
+
+        public string pass { get; set; }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            var mainScreen = new MainWindow();
-            mainScreen.Show();
-            this.Close();
+            if(Username =="staff")
+            {
+                var mainScreen = new MainWindow();
+                mainScreen.Show();
+
+                this.Close();
+            }
+            else if (Username == "admin")
+            {
+                NavigationStore _navigationStore = new NavigationStore();
+                _navigationStore.CurrentViewModel = new AdminMainViewModel();
+                var screen = new adminWindow()
+                {
+                    DataContext = new MainViewModel(_navigationStore)
+                };
+                screen.Show();
+                this.Close();
+            }
+     
+
         }
     
     }
