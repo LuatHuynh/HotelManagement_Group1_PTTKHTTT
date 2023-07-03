@@ -119,6 +119,15 @@
                 <MouseBinding Command="{Binding UserManagement}" MouseAction="LeftClick" />
             </TextBlock.InputBindings>
         </TextBlock>
+        <TextBlock
+                Grid.Column="4"
+                TextWrapping="Wrap"
+                Text="Service Management"
+                  Style="{StaticResource ResourceKey=NavStyle}">
+            <TextBlock.InputBindings>
+                <MouseBinding Command="{Binding Service}" MouseAction="LeftClick" />
+            </TextBlock.InputBindings>
+        </TextBlock>
         <Image Source="../../resources/Icons/cross.png"
                    Grid.Column="9"
                    Height="25" Width="25"

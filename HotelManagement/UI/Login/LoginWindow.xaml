@@ -35,6 +35,7 @@
                                RenderTransformOrigin="0.889,0.484" 
                                FontFamily="Times New Roman"/>
                     <TextBox x:Name="txtUsername" Width="510" Height="60" FontSize="20" FontWeight="Bold" Padding = "20, 15 ,0, 0 "  
+                            Text="{Binding Username}"
                           Foreground="Gray">
                         <TextBox.Resources>
                             <Style TargetType="{x:Type Border}">
@@ -49,7 +50,7 @@
                 <StackPanel Margin="20,148,20,376">
                     <TextBlock Text="Password" FontSize="18" FontWeight="Bold" Height="41" Width="86"/>
                     <Border Background="white" BorderBrush="White" BorderThickness="0" CornerRadius="20" Width="510" Height="60 ">
-                        <PasswordBox Name="password" Height="60" FontSize ="20" VerticalAlignment="Center" Background="White" 
+                        <PasswordBox  Name="password" Height="60" FontSize ="20" VerticalAlignment="Center" Background="White" 
                                      Foreground="Gray" BorderBrush ="White"  Margin="17,0,18,0" 
                                      FontWeight="Bold"  Padding = "0, 15 ,0, 0" SelectionBrush="Black" />
                     </Border>

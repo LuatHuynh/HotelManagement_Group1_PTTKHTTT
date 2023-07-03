@@ -24,7 +24,7 @@ namespace HotelManagement.ViewModel.Admin
             Home = new NavigateCommand(new NavigateService(_navigationStore, () => new AdminHomeScreenViewModel(_navigationStore, createAdminAddUserViewModel)));
             Room = new NavigateCommand(new NavigateService(_navigationStore, () => new AdminViewRoomModel(_navigationStore)));
             Regulation = new NavigateCommand(new NavigateService(_navigationStore, () => new AdminViewRegulationModel(_navigationStore)));
-
+            Service = new NavigateCommand(new NavigateService(_navigationStore, () => new AdminViewServiceViewModel(_navigationStore)));
         }
 
         private void OnCurrentViewModelChanged()
@@ -48,5 +48,6 @@ namespace HotelManagement.ViewModel.Admin
         public ICommand Room { get; set; }
         public ICommand Home { get; set; }
         public ICommand Regulation { get; set; }
+        public ICommand Service { get; set; } 
     }
 }

@@ -155,42 +155,10 @@
                             Command="{Binding addNewRegulation}"></Button>
                 </Grid>
             </StackPanel>
-            <ListView Background="#2E8A99"  Width="800" Height="450" VerticalAlignment="Top">
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
-                <ListViewItem></ListViewItem>
+            <ListView x:Name="listView" Background="#2E8A99"  Width="800" Height="450" VerticalAlignment="Top" 
+                      ItemsSource="{Binding Regulation}">
+
+
                 <ListView.ItemContainerStyle>
 
                     <Style TargetType="ListViewItem">
@@ -206,8 +174,7 @@
 
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="1" FontSize="12" HorizontalAlignment="Center" Margin="1">
-
+                                    <TextBlock Text="{Binding Id}" FontSize="12" HorizontalAlignment="Center" Margin="1">
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -215,42 +182,55 @@
                         <GridViewColumn Header="Name"  Width="110">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="Khoa" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Name}" HorizontalAlignment="Center">
 
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Phone" Width="110">
+                        <GridViewColumn Header="Description" Width="400">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="1234" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Description}" HorizontalAlignment="Center">
 
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Address" Width="400">
+                        <GridViewColumn Header="Price" Width="110">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="26 tran phu" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Price}" HorizontalAlignment="Center">
 
                                     </TextBlock>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Account" Width="100">
+                        <GridViewColumn Header="Action" Width="100">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="Account " HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                                        <Button Command="{Binding Path=DataContext.editCommand, RelativeSource={RelativeSource AncestorType=ListView}}" 
+                                                CommandParameter="{Binding id}">
+                                            <Image Source="../../resources/icons/edit.png"  Width="20px">
 
-                                    </TextBlock>
+                                            </Image>
+                                        </Button>
+
+                                        <Button Command="{Binding Path=DataContext.delete, RelativeSource={RelativeSource AncestorType=ListView}}" 
+                                                CommandParameter="{Binding}" >
+                                            <Image Source="../../resources/icons/trash.png"  Width="20px"></Image>
+                                        </Button>
+                               
+                                       
+                                    </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>
+       
         </StackPanel>
     </Grid>
 </UserControl>

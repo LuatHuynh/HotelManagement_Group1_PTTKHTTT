@@ -1,0 +1,22 @@
+﻿<Window x:Class="HotelManagement.adminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:adminVms="clr-namespace:HotelManagement.ViewModel.Admin"
+                xmlns:adminViews="clr-namespace:HotelManagement.UI.Admin"
+        xmlns:local="clr-namespace:HotelManagement"
+        mc:Ignorable="d"
+                      Title="MainWindow" Height="675" Width="1200"
+        WindowStyle="none"
+        ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type adminVms:AdminMainViewModel}">
+                <adminViews:AdminMainScreen></adminViews:AdminMainScreen>
+            </DataTemplate>
+        </Grid.Resources>
+        <ContentControl Content="{Binding CurrentViewModel}"></ContentControl>
+    </Grid>
+</Window>
