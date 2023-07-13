@@ -100,7 +100,7 @@ namespace HotelManagement.UI.BookingTab
                 MessageBox.Show("Please fill arrival date and departure date", "error");
                 return;
             }
-            string format = "M/d/yyyy";
+            string format = "d/M/yyyy";
             bool isParsearrivalDate = DateTime.TryParseExact(SearchFromForRoomTextBox.Text, format,
                 CultureInfo.InvariantCulture, DateTimeStyles.None, out from);
             bool isDepartureDate = DateTime.TryParseExact(SearchToForRoomTextBox.Text, format,
