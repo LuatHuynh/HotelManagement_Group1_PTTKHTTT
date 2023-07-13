@@ -6,11 +6,15 @@
              xmlns:local="clr-namespace:HotelManagement.UI.CheckoutTab"
              mc:Ignorable="d" 
              Background="White"
-             d:Height="600" d:Width="1200">
+             d:Height="530" d:Width="1200">
     <Grid>
-        <TextBlock Text="DANH SÁCH PHÒNG CHO THUÊ" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0,10,0,460" Width="376" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="99*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="DANH SÁCH PHÒNG CHO THUÊ" HorizontalAlignment="Right" FontSize="24" FontWeight="Bold" Margin="0,0,412,480" Width="376" Grid.ColumnSpan="2" Height="40" VerticalAlignment="Bottom" />
 
-        <StackPanel Orientation="Horizontal" Margin="10,52,856,483">
+        <StackPanel Orientation="Horizontal" Margin="0,0,245,432" Height="65" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="334">
             <TextBlock Text="Mã phòng: " Height="26" Width="61" VerticalAlignment="Center" Margin="0,0,5,0"/>
             <ComboBox x:Name="cbbSearch" Width="173" Height="32">
                 <ComboBoxItem Content="1" />
@@ -27,7 +31,7 @@
             <Button Content="Tìm kiếm" Click="btnSearch_Click" Width="76" Height="31"  VerticalAlignment="Center" />
         </StackPanel>
 
-        <ListView x:Name="roomTypeListView" Margin="10,122,10,0" d:ItemsSource="{d:SampleData ItemCount=5}" VerticalAlignment="Top" Height="399">
+        <ListView x:Name="roomTypeListView" Margin="0,0,34,61" d:ItemsSource="{d:SampleData ItemCount=5}" VerticalAlignment="Bottom" Height="371" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="1139">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="Background" Value="#b9ccb0"/>
@@ -71,9 +75,7 @@
             </ListView.View>
         </ListView>
 
-        <Button Content="Xem danh sách" HorizontalAlignment="Center" 
-                VerticalAlignment="Top"  Width="136" 
-                Click="LoadData_Click" Height="46" RenderTransformOrigin="0.5,0.5" Margin="0,526,0,0">
-        </Button>
+        <Button Content="Xem danh sách" HorizontalAlignment="Right"  Width="136" 
+                Click="LoadData_Click" RenderTransformOrigin="0.5,0.5" Margin="0,0,532,10" Height="46" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
     </Grid>
 </UserControl>

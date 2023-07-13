@@ -30,7 +30,7 @@
 
         <Grid Background="#b9ccb0" Margin="40,51,0,0" RenderTransformOrigin="0.5,0.5" Height="281" VerticalAlignment="Top" HorizontalAlignment="Left" Width="533" >
             <TextBlock Text="Custom Information" FontSize="22" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="164,10,113,0" Height="38" VerticalAlignment="Top"/>
-            <TextBlock Text="Full Name: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,66,427,0" Height="82" VerticalAlignment="Top"/>
+            <TextBlock Text="Full Name: " FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,66,396,0" Height="82" VerticalAlignment="Top"/>
             <TextBox x:Name="txtName" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="221,46,23,0" RenderTransformOrigin="0.5,0.5" Height="47" VerticalAlignment="Top"/>
 
             <TextBlock Text="Personal Indentification:" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.889,0.484" FontFamily="Times New Roman" Margin="10,133,331,0" Height="40" VerticalAlignment="Top"/>
@@ -52,8 +52,8 @@
 
         </Grid>
 
-        <TextBlock Text="Rating for us:" FontWeight="Bold" HorizontalAlignment="Left" FontSize="18" Margin="99,430,0,0" Width="135" Height="23" VerticalAlignment="Top" />
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="239,406,0,0" Width="264" Height="63" VerticalAlignment="Top">
+        <TextBlock Text="Rating for us:" FontWeight="Bold" HorizontalAlignment="Left" FontSize="18" Margin="99,418,0,0" Width="135" Height="23" VerticalAlignment="Top" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="239,402,0,0" Width="264" Height="63" VerticalAlignment="Top">
             <Button x:Name="btnStar1" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50"  BorderBrush="White"/>
             <Button x:Name="btnStar2" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50" BorderBrush="White"/>
             <Button x:Name="btnStar3" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50" BorderBrush="White"/>
@@ -61,10 +61,10 @@
             <Button x:Name="btnStar5" Click="btnStar_Click" FontSize="40" Style="{StaticResource StarButtonStyle}" Height="60" Width="50" BorderBrush="White" />
         </StackPanel>
 
-        <TextBlock Text="Comment: " FontSize="18" FontWeight="Bold" FontFamily="Times New Roman" Margin="622,366,451,0" Height="32" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCmt" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="622,402,45,0" BorderBrush="Blue" Height="104" VerticalAlignment="Top" />
+        <TextBlock Text="Comment: " FontSize="18" FontWeight="Bold" FontFamily="Times New Roman" Margin="622,365,451,0" Height="37" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCmt" FontSize="18" Padding = "20, 15 ,0, 0 " Margin="622,402,45,0" BorderBrush="Blue" Height="77" VerticalAlignment="Top" />
 
-        <Button Content="Save" Click="btnLuuPhieu_Click"  FontSize ="24" Background="#35e5a5" Foreground="White" FontWeight="Bold" Margin="524,511,524,0" Height="51" VerticalAlignment="Top" >
+        <Button Content="Save" Click="btnLuuPhieu_Click"  FontSize ="24" Background="#35e5a5" Foreground="White" FontWeight="Bold" Margin="552,503,533,0" Height="53" VerticalAlignment="Top" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="20" ></Setter>

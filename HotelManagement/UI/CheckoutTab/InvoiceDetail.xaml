@@ -24,11 +24,11 @@
             <TextBox x:Name="txtTotal" IsReadOnly="True" Margin="163,210,140,0" Height="44" VerticalAlignment="Top" />
         </Grid>
 
-        <Grid Margin="84,331,84,10">
+        <Grid Margin="84,341,84,0">
 
-            <Button Content="Create Feedback Form" Click="btnCreateFeedbackForm_Click" Margin="0,0,447,13" Height="67" VerticalAlignment="Bottom"   />
-            <Button Content="Complete Checkout" Click="btnCheckOut_Click" Margin="466,0,0,13" Height="67" VerticalAlignment="Bottom"  />
-            <Button Content="Extend" Click="btnExtend_Click" Margin="235,0,209,13" Height="67" VerticalAlignment="Bottom"  />
+            <Button Content="Create Feedback Form" Click="btnCreateFeedbackForm_Click" Margin="0,13,447,13"   />
+            <Button Content="Complete Checkout" Click="btnCheckOut_Click" Margin="466,13,0,13"  />
+            <Button Content="Extend" Click="btnExtend_Click" Margin="235,13,209,13"  />
         </Grid>
     </Grid>
 </Window>

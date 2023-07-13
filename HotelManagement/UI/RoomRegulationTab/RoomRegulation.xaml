@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:HotelManagement.UI.RoomRegulationTab"
              mc:Ignorable="d"
              Background="White"
-             d:Height="600" d:Width="1200">
+             d:Height="530" d:Width="1200">
     <Grid>
         <TextBlock Text="DANH SÁCH QUY ĐỊNH PHÒNG" FontSize="28" Margin="386,13,319,10" FontWeight="Bold" />
 
-        <ListView x:Name="roomTypeListView" Margin="10,59,10,103" d:ItemsSource="{d:SampleData ItemCount=10}">
+        <ListView x:Name="roomTypeListView" Margin="30,59,30,79" d:ItemsSource="{d:SampleData ItemCount=10}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="Background" Value="#b9ccb0"/>
@@ -48,7 +48,7 @@
 
         <Button Content="View Regulation" HorizontalAlignment="Center" 
                 VerticalAlignment="Top"  Width="136" 
-                Click="LoadData_Click" Height="46"  Margin="0,544,0,0">
+                Click="LoadData_Click" Height="46"  Margin="0,474,0,0">
         </Button>
     </Grid>
 </UserControl>
